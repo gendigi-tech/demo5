@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Về HHP GLOBAL — HHPPaper</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/sections.css">
+<link rel="stylesheet" href="assets/css/pages.css">
+<link rel="stylesheet" href="assets/css/mobile.css?v=1">
+<style>
+/* ===== VỀ HHP GLOBAL — page-scoped ===== */
+
+/* Hero */
+.hhpg-hero{padding-block:clamp(80px,10vw,150px);background:linear-gradient(135deg,rgba(1,103,177,.92) 0%,rgba(4,48,92,.88) 60%,rgba(2,34,69,.82) 100%),url('uploads/hhpy-full-company-group-photo-with-management.jpg') center/cover no-repeat;color:#fff;position:relative;overflow:hidden}
+.hhpg-hero::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 25% 50%,rgba(245,116,69,.18),transparent 55%),radial-gradient(circle at 80% 30%,rgba(0,161,221,.2),transparent 50%);pointer-events:none}
+.hhpg-hero .wrap{position:relative;z-index:2}
+.hhpg-hero h1{font-size:clamp(2rem,1.4rem + 2.4vw,3.2rem);font-weight:800;color:#fff;line-height:1.15;max-width:20ch}
+.hhpg-hero p{max-width:60ch;color:rgba(255,255,255,.88);margin-top:.9em;font-size:1.05rem;line-height:1.7}
+
+/* CEO Message */
+.ceo-section{padding-block:clamp(56px,8vw,100px)}
+.ceo-grid{display:grid;grid-template-columns:.38fr .62fr;gap:clamp(24px,4vw,56px);align-items:center}
+.ceo-photo{border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--sh-lg);background:var(--paper-100);aspect-ratio:3/4}
+.ceo-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.ceo-quote{font-size:clamp(1rem,.95rem + .2vw,1.1rem);line-height:1.8;color:var(--text-soft)}
+.ceo-quote blockquote{border-left:4px solid var(--primary);padding-left:1.5em;margin:1.2em 0;font-style:italic;color:var(--text);font-size:1.05em;line-height:1.8}
+.ceo-name{margin-top:1.4em;font-weight:700;color:var(--primary);font-size:1rem}
+.ceo-title{color:var(--text-soft);font-size:.9rem}
+
+/* Timeline */
+.tl-section{padding-block:clamp(56px,8vw,100px);background:var(--paper-50)}
+.tl-list{position:relative;max-width:860px;margin:2.4rem auto 0;padding-left:40px}
+.tl-list::before{content:"";position:absolute;left:15px;top:0;bottom:0;width:3px;background:linear-gradient(180deg,var(--primary),var(--accent));border-radius:3px}
+.tl-item{position:relative;margin-bottom:2.2rem;padding-left:1.6em}
+.tl-item::before{content:"";position:absolute;left:-33px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--primary);border:3px solid #fff;box-shadow:0 0 0 3px var(--primary)}
+.tl-item:nth-child(even)::before{background:var(--accent);box-shadow:0 0 0 3px var(--accent)}
+.tl-date{font-weight:800;color:var(--primary);font-size:.95rem;letter-spacing:.02em}
+.tl-item:nth-child(even) .tl-date{color:var(--accent)}
+.tl-desc{color:var(--text);margin-top:.3em;line-height:1.65}
+
+/* Values */
+.val6-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:2.4rem}
+.val6-card{background:#fff;border-radius:var(--r-lg);padding:2rem 1.6rem;box-shadow:0 4px 20px -6px rgba(0,0,0,.08);border:1px solid var(--line);text-align:center;transition:transform .25s,box-shadow .25s}
+.val6-card:hover{transform:translateY(-4px);box-shadow:var(--sh-lg)}
+.val6-ic{width:56px;height:56px;border-radius:50%;background:linear-gradient(140deg,var(--primary),var(--blue-600));display:grid;place-items:center;margin:0 auto .9em;color:#fff;font-size:1.4rem;font-weight:800}
+.val6-card h4{font-size:1.05rem;font-weight:700;color:var(--text);margin-bottom:.4em}
+.val6-card p{font-size:.9rem;line-height:1.6;color:var(--text-soft)}
+
+/* Culture */
+.culture-section{background:linear-gradient(180deg,rgba(1,103,177,.92),rgba(4,48,92,.94)),url('uploads/hhpy-workers-team-holding-hands-unity-hhpy-crane.jpg') center/cover no-repeat;color:#fff;padding-block:clamp(56px,8vw,100px)}
+.culture-section .eyebrow{color:rgba(255,255,255,.8)}
+.culture-section .section-title{color:#fff}
+.culture-section .section-intro{color:rgba(255,255,255,.85)}
+.songxanh-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem;margin-top:2.4rem}
+.sx-card{background:rgba(255,255,255,.1);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.15);border-radius:var(--r-lg);padding:1.6rem;transition:background .25s}
+.sx-card:hover{background:rgba(255,255,255,.18)}
+.sx-card h4{color:#fff;font-weight:700;margin-bottom:.4em;font-size:1rem}
+.sx-card p{color:rgba(255,255,255,.82);font-size:.9rem;line-height:1.6}
+
+/* Org chart */
+.org-section{padding-block:clamp(56px,8vw,100px);background:var(--paper-50)}
+.org-group{margin-top:2.4rem}
+.org-group-title{font-size:1.05rem;font-weight:800;color:var(--primary);text-transform:uppercase;letter-spacing:.06em;margin-bottom:1rem;padding-bottom:.6rem;border-bottom:2px solid var(--primary)}
+.org-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem;margin-bottom:2.4rem}
+.org-card{background:#fff;border-radius:var(--r-md);padding:1.3rem 1.4rem;border:1px solid var(--line);display:flex;gap:1rem;align-items:center;transition:box-shadow .25s}
+.org-card:hover{box-shadow:0 6px 20px -6px rgba(1,103,177,.15)}
+.org-avatar{width:50px;height:50px;border-radius:50%;background:linear-gradient(140deg,var(--primary),var(--blue-400));display:grid;place-items:center;color:#fff;font-weight:700;font-size:1.1rem;flex-shrink:0}
+.org-card .org-name{font-weight:700;font-size:.95rem;color:var(--text)}
+.org-card .org-role{font-size:.85rem;color:var(--text-soft);margin-top:.15em}
+
+/* Subsidiaries */
+.subs-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.4rem;margin-top:2.4rem}
+.sub-card{background:#fff;border-radius:var(--r-lg);padding:1.8rem;border:1px solid var(--line);box-shadow:0 4px 16px -6px rgba(0,0,0,.06);transition:transform .25s}
+.sub-card:hover{transform:translateY(-3px);box-shadow:var(--sh-lg)}
+.sub-card h4{font-size:1.05rem;font-weight:700;color:var(--text);margin-bottom:.4em}
+.sub-card .sub-own{display:inline-block;background:var(--blue-50);color:var(--primary);font-weight:700;font-size:.82rem;padding:.25em .7em;border-radius:var(--r-pill);margin-bottom:.6em}
+.sub-card p{font-size:.9rem;line-height:1.6;color:var(--text-soft)}
+
+/* Brand Promise 3Đ+1P */
+.promise-g{padding-block:clamp(56px,8vw,100px);background:var(--paper-50)}
+.promise-g-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin-top:2.4rem}
+.pg-card{background:#fff;border-radius:var(--r-lg);padding:2rem 1.4rem;text-align:center;border:1px solid var(--line);box-shadow:0 4px 16px -6px rgba(0,0,0,.06);transition:transform .25s}
+.pg-card:hover{transform:translateY(-4px);box-shadow:var(--sh-lg)}
+.pg-card .pg-big{font-size:2.2rem;font-weight:800;color:var(--primary);line-height:1}
+.pg-card .pg-label{font-size:1rem;font-weight:700;color:var(--text);margin:.3em 0 .5em}
+.pg-card .pg-sub{font-size:.88rem;line-height:1.55;color:var(--text-soft)}
+
+/* Customer service standards */
+.hhp-std{padding-block:clamp(56px,8vw,100px)}
+.hhp-std-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,56px);align-items:center;margin-top:2.4rem}
+.hhp-std-list{display:flex;flex-direction:column;gap:1.4rem}
+.hhp-std-item{display:flex;gap:1rem;align-items:flex-start}
+.hhp-std-letter{width:44px;height:44px;border-radius:50%;background:var(--primary);color:#fff;font-weight:800;font-size:1.2rem;display:grid;place-items:center;flex-shrink:0}
+.hhp-std-item h4{font-size:1.05rem;font-weight:700;color:var(--text);margin-bottom:.2em}
+.hhp-std-item p{font-size:.9rem;color:var(--text-soft);line-height:1.55}
+.hhp-std-brand{text-align:center}
+.hhp-std-brand .hhp-words{font-size:clamp(1.6rem,1.2rem + 1.6vw,2.4rem);font-weight:800;line-height:1.35;color:var(--primary)}
+.hhp-std-brand .hhp-words span{color:var(--accent)}
+
+/* Responsive */
+@media (max-width:900px){
+  .ceo-grid{grid-template-columns:1fr!important}
+  .ceo-photo{max-width:280px;aspect-ratio:1/1;margin:0 auto 1.4rem}
+  .val6-grid{grid-template-columns:repeat(2,1fr)}
+  .org-grid{grid-template-columns:1fr}
+  .promise-g-cards{grid-template-columns:repeat(2,1fr)}
+  .hhp-std-grid{grid-template-columns:1fr}
+  .hhp-std-brand{order:-1}
+}
+@media (max-width:600px){
+  .val6-grid{grid-template-columns:1fr}
+  .subs-grid{grid-template-columns:1fr}
+  .promise-g-cards{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body data-page="ve-hhp-global">
+<div data-chrome="header"></div>
+
+<main>
+
+<!-- ===================== HERO ===================== -->
+<section class="hhpg-hero" data-screen-label="Về HHP GLOBAL">
+  <div class="wrap">
+    <div class="breadcrumb" style="color:rgba(255,255,255,.8)"><a href="index.html" data-en="Home" style="color:rgba(255,255,255,.85)">Trang chủ</a><span> / </span><a href="gioi-thieu.html" data-en="About" style="color:rgba(255,255,255,.85)">Giới thiệu</a><span> / </span><span data-en="About HHP GLOBAL">Về HHP GLOBAL</span></div>
+    <span class="eyebrow" style="color:rgba(255,255,255,.8)" data-en="About HHP GLOBAL">Tập đoàn</span>
+    <h1 data-en="HHP GLOBAL — Green pioneer in recycled packaging paper">HHP GLOBAL — Tiên phong xanh trong ngành giấy bao bì tái chế</h1>
+    <p data-en="From reviving an abandoned paper mill to a HOSE-listed group with two modern factories, HHP GLOBAL is committed to a green, happy, and prosperous world.">Từ hành trình khôi phục thành công một Nhà máy giấy có nguy cơ bị phá bỏ hoàn toàn, HHP GLOBAL đã vươn lên trở thành tập đoàn niêm yết trên HOSE với hai nhà máy hiện đại, kiên định sứ mệnh vì một Thế giới Xanh – Hạnh phúc – Thịnh vượng.</p>
+  </div>
+</section>
+
+<!-- ===================== THƯ CEO ===================== -->
+<section class="section ceo-section" id="thu-ceo" style="scroll-margin-top:80px">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow" data-en="CEO message">Thư Tổng Giám đốc</span>
+      <h2 class="section-title reveal" data-en="The progressive-leadership philosophy">Triết lý Nhà lãnh đạo Lũy tiến</h2>
+    </div>
+    <div class="ceo-grid reveal" data-d="1">
+      <div class="ceo-photo">
+        <img src="uploads/hhpglobal-ceo-tran-thi-thu-phuong.jpg" alt="Bà Trần Thị Thu Phương — Tổng Giám đốc HHP GLOBAL" loading="lazy">
+      </div>
+      <div class="ceo-quote">
+        <blockquote data-en="In your role, you are a leader. Don't simply wait for orders — find problems, build solutions, and keep improving.">
+          "Ở vị trí của mình, bạn chính là nhà lãnh đạo. Đừng chỉ đợi chỉ thị — hãy tìm ra vấn đề, xây dựng giải pháp và không ngừng cải tiến."
+        </blockquote>
+        <p data-en="At HHP GLOBAL, we believe that every individual — from the production line to the boardroom — can become a progressive leader. This philosophy drives each of us to take ownership, innovate daily, and contribute to a sustainable future.">Tại HHP GLOBAL, chúng tôi tin rằng mỗi cá nhân — từ dây chuyền sản xuất đến phòng họp — đều có thể trở thành một nhà lãnh đạo lũy tiến. Triết lý này thúc đẩy mỗi người chủ động sở hữu công việc, cải tiến mỗi ngày và đóng góp cho tương lai bền vững.</p>
+        <p style="margin-top:1em" data-en="With the vision of 'For a Green – Happy – Prosperous World', HHP GLOBAL is not just building a business — we are building a community where integrity, gratitude, and social responsibility are the foundation of every decision.">Với tầm nhìn "Vì một Thế giới Xanh – Hạnh phúc – Thịnh vượng", HHP GLOBAL không chỉ xây dựng doanh nghiệp — chúng tôi đang xây dựng một cộng đồng nơi sự chính trực, lòng biết ơn và trách nhiệm xã hội là nền tảng của mọi quyết định.</p>
+        <div class="ceo-name" data-en="Trần Thị Thu Phương">Trần Thị Thu Phương</div>
+        <div class="ceo-title" data-en="Vice Chairwoman & CEO — HHP GLOBAL">Phó Chủ tịch HĐQT kiêm Tổng Giám đốc — HHP GLOBAL</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CÂU CHUYỆN & TIMELINE ===================== -->
+<section class="section tl-section" id="lich-su" style="scroll-margin-top:80px">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow" data-en="Our journey">Hành trình phát triển</span>
+      <h2 class="section-title reveal" data-en="From revival to a listed group">Từ hồi sinh đến tập đoàn niêm yết</h2>
+      <p class="section-intro reveal" data-d="1" data-en="Starting from reviving an old paper mill at risk of demolition, HHP GLOBAL has grown into a leading recycled packaging paper manufacturer in Vietnam.">Khởi đầu từ việc khôi phục thành công một Nhà máy giấy có nguy cơ phải phá bỏ hoàn toàn, HHP GLOBAL đã vươn lên trở thành nhà sản xuất giấy bao bì tái chế hàng đầu Việt Nam.</p>
+    </div>
+    <div class="tl-list reveal" data-d="1">
+      <div class="tl-item">
+        <div class="tl-date">05/11/2012</div>
+        <div class="tl-desc" data-en="HHP GLOBAL was founded, beginning the journey of reviving a paper mill at risk of demolition.">Thành lập HHP GLOBAL, khởi đầu hành trình khôi phục nhà máy giấy có nguy cơ phá bỏ hoàn toàn.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">08/08/2013</div>
+        <div class="tl-desc" data-en="Produced the first paper roll — a milestone marking the revival of the factory.">Sản xuất cuộn giấy đầu tiên — cột mốc đánh dấu sự hồi sinh của nhà máy.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">08/08/2018</div>
+        <div class="tl-desc" data-en="Listed on HNX — an important step in transparent and sustainable development.">Niêm yết trên HNX — bước tiến quan trọng trong phát triển minh bạch và bền vững.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">03/03/2021</div>
+        <div class="tl-desc" data-en="Successfully transferred to HOSE (Ho Chi Minh Stock Exchange) under ticker HHP.">Chuyển niêm yết thành công lên HOSE (Sở Giao dịch Chứng khoán TP.HCM) với mã HHP.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">02/11/2021</div>
+        <div class="tl-desc" data-en="Signed EPC contract with SUMEC (China) for HHPPaper Hải Phòng factory — modern equipment, capacity 128,000 tonnes/year.">Ký hợp đồng EPC với SUMEC (Trung Quốc) xây dựng nhà máy HHPPaper Hải Phòng — thiết bị hiện đại, công suất 128.000 tấn/năm.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">24/05/2022</div>
+        <div class="tl-desc" data-en="Groundbreaking ceremony for HHPPaper Hải Phòng factory.">Khởi công xây dựng nhà máy HHPPaper Hải Phòng.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">2020 – 2023</div>
+        <div class="tl-desc" data-en="Recognized in the FAST500 ranking of Vietnam's fastest growing enterprises for four consecutive years.">Liên tục được vinh danh trong bảng xếp hạng FAST500 doanh nghiệp tăng trưởng nhanh nhất Việt Nam suốt 4 năm.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">07/07/2023</div>
+        <div class="tl-desc" data-en="Officially renamed to HHP GLOBAL Joint Stock Company, reflecting the vision of a global ecosystem.">Chính thức đổi tên thành Công ty Cổ phần HHP GLOBAL, phản ánh tầm nhìn hệ sinh thái toàn cầu.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">08/08/2023</div>
+        <div class="tl-desc" data-en="Issued the first ESG Report — leading in sustainability transparency in Vietnam's paper industry.">Phát hành Báo cáo ESG đầu tiên — dẫn đầu trong minh bạch phát triển bền vững ngành giấy Việt Nam.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">13/10/2023</div>
+        <div class="tl-desc" data-en="Ranked Top 3 ESG enterprises by the Ho Chi Minh City Stock Exchange.">Lọt Top 3 doanh nghiệp ESG do Sở Giao dịch Chứng khoán TP.HCM bình chọn.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">23/12/2023</div>
+        <div class="tl-desc" data-en="Celebrated the 10th anniversary of the first paper roll and inaugurated HHPPaper Hải Phòng factory.">Kỷ niệm 10 năm cuộn giấy đầu tiên và khánh thành nhà máy HHPPaper Hải Phòng.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">01/2024</div>
+        <div class="tl-desc" data-en="Broke ground on HHPPaper Phú Yên factory (100,000 tonnes/year) and achieved LEED Silver green building certification for Hải Phòng.">Khởi công nhà máy HHPPaper Phú Yên (100.000 tấn/năm) và đạt chứng nhận Công trình xanh LEED Silver cho nhà máy Hải Phòng.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== LỜI HỨA THƯƠNG HIỆU 3Đ+1P ===================== -->
+<section class="section promise-g" id="loi-hua" style="scroll-margin-top:80px">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow" data-en="Brand promise">Lời hứa thương hiệu</span>
+      <h2 class="section-title reveal" data-en="3Đ + 1P">3Đ + 1P</h2>
+    </div>
+    <div class="promise-g-cards reveal" data-d="1">
+      <div class="pg-card">
+        <div class="pg-big" data-en="Đ">Đúng</div>
+        <div class="pg-label" data-en="On time">Thời gian</div>
+        <div class="pg-sub" data-en="Delivery on the agreed date, every time. No delays, no excuses.">Giao đúng ngày cam kết, mỗi lần. Không trễ hẹn, không viện lý do.</div>
+      </div>
+      <div class="pg-card">
+        <div class="pg-big" data-en="Đ">Đúng</div>
+        <div class="pg-label" data-en="Right quantity">Số lượng</div>
+        <div class="pg-sub" data-en="Accurate tonnage, no shortfalls. Reliable supply for every production plan.">Chính xác tấn số, không thiếu hụt. Đảm bảo nguồn cung cho mọi kế hoạch sản xuất.</div>
+      </div>
+      <div class="pg-card">
+        <div class="pg-big" data-en="Đ">Đúng</div>
+        <div class="pg-label" data-en="Right quality">Chất lượng</div>
+        <div class="pg-sub" data-en="Specs met, every reel, every batch. Consistent quality throughout.">Đạt tiêu chuẩn từng cuộn, từng lô. Chất lượng đồng nhất xuyên suốt.</div>
+      </div>
+      <div class="pg-card">
+        <div class="pg-big" data-en="30'">30'</div>
+        <div class="pg-label" data-en="Fast response">Phản hồi nhanh chóng</div>
+        <div class="pg-sub" data-en="Any question or issue — answered within 30 minutes by our dedicated team.">Mọi câu hỏi hay vấn đề — trả lời trong 30 phút bởi đội ngũ tận tâm.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CHUẨN MỰC PHỤC VỤ KHÁCH HÀNG ===================== -->
+<section class="section hhp-std" id="chuan-muc" style="scroll-margin-top:80px">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow" data-en="Customer service standards">Chuẩn mực phục vụ Khách hàng</span>
+      <h2 class="section-title reveal" data-en="HHP — Delighted · Harmonious · Fitting">HHP — Hân hạnh · Hài hòa · Phù hợp</h2>
+    </div>
+    <div class="hhp-std-grid reveal" data-d="1">
+      <div class="hhp-std-list">
+        <div class="hhp-std-item">
+          <div class="hhp-std-letter">H</div>
+          <div>
+            <h4 data-en="Delighted (Hân hạnh)">Hân hạnh</h4>
+            <p data-en="We are honoured to serve — every interaction reflects sincerity, professionalism, and the pride of accompanying our customers.">Chúng tôi lấy sự phục vụ làm niềm vinh hạnh — mỗi tương tác đều phản ánh sự chân thành, chuyên nghiệp và tự hào đồng hành cùng Quý Khách hàng.</p>
+          </div>
+        </div>
+        <div class="hhp-std-item">
+          <div class="hhp-std-letter">H</div>
+          <div>
+            <h4 data-en="Harmonious (Hài hòa)">Hài hòa</h4>
+            <p data-en="Balancing satisfaction, efficiency and long-term benefit — a relationship built on mutual trust.">Cân bằng sự hài lòng, hiệu quả và lợi ích lâu dài — mối quan hệ xây trên niềm tin bền vững, hợp tác Việt Nam vào thế giới và cả thế giới vào Việt Nam.</p>
+          </div>
+        </div>
+        <div class="hhp-std-item">
+          <div class="hhp-std-letter" style="background:var(--accent)">P</div>
+          <div>
+            <h4 data-en="Fitting (Phù hợp)">Phù hợp</h4>
+            <p data-en="Tailoring products, delivery and service to each customer's specific needs. The right product, the right way.">Linh hoạt đáp ứng nhu cầu sản phẩm — Phù hợp, đúng ứng dụng, đúng tiêu chuẩn bao bì của Quý Khách hàng.</p>
+          </div>
+        </div>
+      </div>
+      <div class="hhp-std-brand">
+        <div class="hhp-words">HÂN HẠNH</div>
+        <div class="hhp-words">HÀI HÒA</div>
+        <div class="hhp-words"><span>PHÙ HỢP</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SỨ MỆNH & TẦM NHÌN ===================== -->
+<section class="section" id="su-menh" style="scroll-margin-top:80px">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow" data-en="Mission & Vision">Sứ mệnh & Tầm nhìn</span>
+      <h2 class="section-title reveal" data-en="FOR A GREEN – HAPPY – PROSPEROUS WORLD" style="max-width:none;font-size:clamp(1.3rem,1rem + 1.3vw,2rem)">VÌ MỘT THẾ GIỚI XANH – HẠNH PHÚC – THỊNH VƯỢNG</h2>
+      <p class="section-intro reveal" data-d="1" data-en="HHP GLOBAL believes that a business can only grow sustainably when it balances economic growth, environmental responsibility and human values.">HHP GLOBAL tin rằng doanh nghiệp chỉ thực sự phát triển bền vững khi biết hài hòa giữa tăng trưởng kinh tế, trách nhiệm môi trường và giá trị con người.</p>
+    </div>
+    <div class="value3 reveal" data-d="1">
+      <div class="v3"><div class="v3-img"><img src="uploads/green_xanh.jpg" alt="Xanh" style="width:100%;height:100%;object-fit:cover;display:block"></div><span class="vn">01</span><h4 data-en="Green">Xanh</h4><p data-en="Closed-loop recycling, clean energy and a NetZero 2035 commitment.">Tái chế tuần hoàn, năng lượng sạch và cam kết NetZero 2035.</p></div>
+      <div class="v3"><div class="v3-img"><img src="uploads/happy.jpg" alt="Hạnh phúc" style="width:100%;height:100%;object-fit:cover;display:block"></div><span class="vn">02</span><h4 data-en="Happy">Hạnh phúc</h4><p data-en="A safe, fair workplace and shared value with communities.">Môi trường làm việc an toàn, công bằng và sẻ chia giá trị với cộng đồng.</p></div>
+      <div class="v3"><div class="v3-img"><img src="uploads/thinh%20vuong.jpg" alt="Thịnh vượng" style="width:100%;height:100%;object-fit:cover;display:block"></div><span class="vn">03</span><h4 data-en="Prosperous">Thịnh vượng</h4><p data-en="Sustainable growth and lasting returns for partners and shareholders.">Tăng trưởng bền vững và lợi ích lâu dài cho đối tác, cổ đông.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== GIÁ TRỊ CỐT LÕI ===================== -->
+<section class="section" id="gia-tri" style="scroll-margin-top:80px;background:var(--paper-50)">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow" data-en="Core values">Giá trị cốt lõi</span>
+      <h2 class="section-title reveal" data-en="Six values that guide our every action">Sáu giá trị dẫn lối mọi hành động</h2>
+    </div>
+    <div class="val6-grid reveal" data-d="1">
+      <div class="val6-card">
+        <div class="val6-ic">①</div>
+        <h4 data-en="Integrity">Chính trực</h4>
+        <p data-en="Acting transparently, honestly and responsibly in every relationship.">Hành động minh bạch, trung thực và có trách nhiệm trong mọi mối quan hệ.</p>
+      </div>
+      <div class="val6-card">
+        <div class="val6-ic">②</div>
+        <h4 data-en="Customer-centric">Khách hàng là Trung tâm</h4>
+        <p data-en="Placing customer needs at the heart of every decision and innovation.">Đặt nhu cầu khách hàng làm trung tâm của mọi quyết định và cải tiến.</p>
+      </div>
+      <div class="val6-card">
+        <div class="val6-ic">③</div>
+        <h4 data-en="Action">Hành động</h4>
+        <p data-en="Proactive, decisive — turning ideas into results quickly and effectively.">Chủ động, quyết đoán — biến ý tưởng thành kết quả nhanh chóng và hiệu quả.</p>
+      </div>
+      <div class="val6-card">
+        <div class="val6-ic">④</div>
+        <h4 data-en="Love & Gratitude">Yêu thương và Biết ơn</h4>
+        <p data-en="Building a warm workplace where everyone feels valued and appreciated.">Xây dựng môi trường ấm áp, nơi mỗi người đều được trân trọng và ghi nhận.</p>
+      </div>
+      <div class="val6-card">
+        <div class="val6-ic">⑤</div>
+        <h4 data-en="Recognition">Ghi nhận</h4>
+        <p data-en="Celebrating every contribution — big and small — that drives us forward.">Tôn vinh mọi đóng góp — lớn và nhỏ — thúc đẩy chúng tôi tiến về phía trước.</p>
+      </div>
+      <div class="val6-card">
+        <div class="val6-ic">⑥</div>
+        <h4 data-en="Social Responsibility">Trách nhiệm Xã hội</h4>
+        <p data-en="Operating sustainably, creating shared value for communities and the environment.">Vận hành bền vững, tạo giá trị chung cho cộng đồng và môi trường.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== VĂN HÓA DOANH NGHIỆP ===================== -->
+<section class="section culture-section" id="van-hoa" style="scroll-margin-top:80px">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow" data-en="Corporate culture">Văn hóa doanh nghiệp</span>
+      <h2 class="section-title reveal" data-en="Live Green — the HHP GLOBAL way">Sống Xanh — phong cách HHP GLOBAL</h2>
+      <p class="section-intro reveal" data-d="1" data-en="'Live Green' is not just a slogan — it is the daily practice that shapes how every HHP GLOBAL team member thinks, works and lives.">"Sống Xanh" không chỉ là khẩu hiệu — đó là thực hành hằng ngày định hình cách mỗi thành viên HHP GLOBAL suy nghĩ, làm việc và sống.</p>
+    </div>
+    <div class="songxanh-grid reveal" data-d="1">
+      <div class="sx-card">
+        <h4 data-en="Green with self">Sống Xanh với bản thân</h4>
+        <p data-en="Nurturing physical and mental health, continuous self-improvement every day.">Nuôi dưỡng sức khỏe thể chất và tinh thần, không ngừng hoàn thiện bản thân mỗi ngày.</p>
+      </div>
+      <div class="sx-card">
+        <h4 data-en="Green with family">Sống Xanh với gia đình</h4>
+        <p data-en="Building a harmonious family, practicing gratitude and togetherness.">Xây dựng gia đình hài hòa, thực hành lòng biết ơn và sự gắn kết.</p>
+      </div>
+      <div class="sx-card">
+        <h4 data-en="Green with the company">Sống Xanh với công ty</h4>
+        <p data-en="Working with integrity, taking ownership and being proud of what we build together.">Làm việc chính trực, chủ động sở hữu và tự hào về những gì cùng kiến tạo.</p>
+      </div>
+      <div class="sx-card">
+        <h4 data-en="Green with the community">Sống Xanh với cộng đồng</h4>
+        <p data-en="Sharing value, contributing to social welfare and local development.">Sẻ chia giá trị, đóng góp vào phúc lợi xã hội và phát triển địa phương.</p>
+      </div>
+      <div class="sx-card">
+        <h4 data-en="Green with the environment">Sống Xanh với môi trường</h4>
+        <p data-en="Protecting natural resources, reducing waste and pursuing NetZero.">Bảo vệ tài nguyên thiên nhiên, giảm thiểu chất thải và hướng tới NetZero.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CƠ CẤU TỔ CHỨC ===================== -->
+<section class="section org-section" id="co-cau" style="scroll-margin-top:80px">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow" data-en="Organizational structure">Cơ cấu tổ chức</span>
+      <h2 class="section-title reveal" data-en="Leadership team">Đội ngũ lãnh đạo</h2>
+    </div>
+
+    <div class="org-group reveal" data-d="1">
+      <div class="org-group-title" data-en="Board of Directors">Hội đồng Quản trị</div>
+      <div class="org-grid">
+        <div class="org-card">
+          <div class="org-avatar">TT</div>
+          <div><div class="org-name">Bà Nguyễn Thị Thu Thủy</div><div class="org-role" data-en="Chairwoman of the Board">Chủ tịch HĐQT</div></div>
+        </div>
+        <div class="org-card">
+          <div class="org-avatar">TP</div>
+          <div><div class="org-name">Bà Trần Thị Thu Phương</div><div class="org-role" data-en="Vice Chairwoman & CEO">Phó Chủ tịch HĐQT kiêm TGĐ</div></div>
+        </div>
+        <div class="org-card">
+          <div class="org-avatar">VQ</div>
+          <div><div class="org-name">Ông Nguyễn Vinh Quang</div><div class="org-role" data-en="Board member">Thành viên HĐQT</div></div>
+        </div>
+        <div class="org-card">
+          <div class="org-avatar">TH</div>
+          <div><div class="org-name">Bà Trịnh Thị Hương</div><div class="org-role" data-en="Board member">Thành viên HĐQT</div></div>
+        </div>
+        <div class="org-card">
+          <div class="org-avatar">ĐT</div>
+          <div><div class="org-name">Ông Đoàn Đức Thuận</div><div class="org-role" data-en="Independent Board member">Thành viên HĐQT độc lập</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="org-group reveal" data-d="2">
+      <div class="org-group-title" data-en="Supervisory Board">Ban Kiểm soát</div>
+      <div class="org-grid">
+        <div class="org-card">
+          <div class="org-avatar" style="background:linear-gradient(140deg,var(--accent),var(--orange-600))">TH</div>
+          <div><div class="org-name">Bà Trịnh Thị Hương</div><div class="org-role" data-en="Head of Supervisory Board">Trưởng Ban kiểm soát</div></div>
+        </div>
+        <div class="org-card">
+          <div class="org-avatar" style="background:linear-gradient(140deg,var(--accent),var(--orange-600))">HH</div>
+          <div><div class="org-name">Bà Phạm Thị Hồng Hạnh</div><div class="org-role" data-en="Member">Thành viên</div></div>
+        </div>
+        <div class="org-card">
+          <div class="org-avatar" style="background:linear-gradient(140deg,var(--accent),var(--orange-600))">QD</div>
+          <div><div class="org-name">Ông Lương Quốc Doanh</div><div class="org-role" data-en="Member">Thành viên</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="org-group reveal" data-d="3">
+      <div class="org-group-title" data-en="Executive Management">Ban Điều hành</div>
+      <div class="org-grid">
+        <div class="org-card">
+          <div class="org-avatar" style="background:linear-gradient(140deg,#00874d,#00a85d)">TP</div>
+          <div><div class="org-name">Bà Trần Thị Thu Phương</div><div class="org-role" data-en="CEO">Tổng Giám đốc</div></div>
+        </div>
+        <div class="org-card">
+          <div class="org-avatar" style="background:linear-gradient(140deg,#00874d,#00a85d)">VQ</div>
+          <div><div class="org-name">Ông Nguyễn Vinh Quang</div><div class="org-role" data-en="Deputy CEO">Phó Tổng Giám đốc</div></div>
+        </div>
+        <div class="org-card">
+          <div class="org-avatar" style="background:linear-gradient(140deg,#00874d,#00a85d)">TT</div>
+          <div><div class="org-name">Bà Phạm Thị Thuỷ</div><div class="org-role" data-en="Chief Accountant">Kế toán trưởng</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CÔNG TY THÀNH VIÊN ===================== -->
+<section class="section" id="thanh-vien" style="scroll-margin-top:80px">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow" data-en="Subsidiaries">Công ty thành viên</span>
+      <h2 class="section-title reveal" data-en="The HHP GLOBAL ecosystem">Hệ sinh thái HHP GLOBAL</h2>
+      <p class="section-intro reveal" data-d="1" data-en="HHP GLOBAL builds a comprehensive ecosystem spanning paper production, recycling solutions, clean energy and strategic investments.">HHP GLOBAL xây dựng hệ sinh thái toàn diện bao trùm sản xuất giấy, giải pháp tái chế, năng lượng sạch và đầu tư chiến lược.</p>
+    </div>
+
+    <div class="subs-grid reveal" data-d="1">
+      <div class="sub-card">
+        <span class="sub-own" data-en="52.75% ownership">Sở hữu 52,75%</span>
+        <h4 data-en="Hoàng Hà Hà Nam Paper JSC">CTCP Giấy Hoàng Hà Hà Nam</h4>
+        <p data-en="Recycled packaging paper production in the northern region, the origin factory of HHP GLOBAL's journey.">Sản xuất giấy bao bì tái chế tại miền Bắc, nhà máy khởi nguồn hành trình HHP GLOBAL.</p>
+      </div>
+      <div class="sub-card">
+        <span class="sub-own" data-en="80% ownership">Sở hữu 80%</span>
+        <h4 data-en="3C Pro JSC">CTCP 3C Pro</h4>
+        <p data-en="Recovered paper collection and supply — securing raw material input for the production chain.">Thu mua và cung ứng giấy thu hồi — đảm bảo nguyên liệu đầu vào cho chuỗi sản xuất.</p>
+      </div>
+      <div class="sub-card">
+        <span class="sub-own" data-en="51% ownership">Sở hữu 51%</span>
+        <h4 data-en="HHP Green Energy JSC">CTCP Năng lượng Xanh HHP</h4>
+        <p data-en="Clean energy solutions — solar rooftop systems supporting green factory operations.">Giải pháp năng lượng sạch — hệ thống điện mặt trời áp mái hỗ trợ vận hành nhà máy xanh.</p>
+      </div>
+      <div class="sub-card">
+        <span class="sub-own" data-en="51% ownership">Sở hữu 51%</span>
+        <h4 data-en="Hoàng Hà Phú Yên Paper JSC">CTCP Giấy Hoàng Hà Phú Yên</h4>
+        <p data-en="HHPPaper Phú Yên factory — 100,000 tonnes/year capacity, expanding the group's reach to central Vietnam.">Nhà máy HHPPaper Phú Yên — công suất 100.000 tấn/năm, mở rộng phạm vi tập đoàn đến miền Trung.</p>
+      </div>
+    </div>
+
+    <!-- Liên kết -->
+    <div class="reveal" data-d="2" style="margin-top:2rem;padding:1.4rem 1.8rem;background:var(--paper-50);border-radius:var(--r-lg);border:1px solid var(--line)">
+      <h4 style="font-size:.95rem;font-weight:700;color:var(--text);margin-bottom:.4em" data-en="Associated company">Công ty liên kết</h4>
+      <p style="font-size:.92rem;color:var(--text-soft);line-height:1.6" data-en="Hoàng Hà Investment Group JSC — 30% ownership. Strategic investment channel connecting HHP GLOBAL's ecosystem with broader opportunities."><b>Tập đoàn Đầu tư Hoàng Hà</b> — Sở hữu 30%. Kênh đầu tư chiến lược kết nối hệ sinh thái HHP GLOBAL với các cơ hội rộng lớn hơn.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CON SỐ ẤN TƯỢNG ===================== -->
+<section class="section" id="con-so" style="scroll-margin-top:80px;background:linear-gradient(135deg,rgba(1,103,177,.94),rgba(4,48,92,.96));color:#fff;padding-block:clamp(56px,8vw,90px)">
+  <div class="wrap" style="text-align:center">
+    <span class="eyebrow" style="color:rgba(255,255,255,.7)" data-en="Impressive numbers">Con số ấn tượng</span>
+    <h2 class="section-title reveal" style="color:#fff" data-en="Milestones that define us">Những cột mốc định hình chúng tôi</h2>
+    <div class="esg-metrics reveal" data-d="1">
+      <div class="metric"><div class="n"><span data-count="228000" data-format="grp"></span></div><div class="l" data-en="tonnes/year total capacity">tấn/năm tổng công suất</div></div>
+      <div class="metric"><div class="n">FAST<span data-count="500"></span></div><div class="l" data-en="4 consecutive years">4 năm liên tiếp</div></div>
+      <div class="metric"><div class="n">LEED Silver</div><div class="l" data-en="Green building certified">Chứng nhận công trình xanh</div></div>
+      <div class="metric"><div class="n">Top <span data-count="3"></span></div><div class="l" data-en="ESG enterprises — HOSE">Doanh nghiệp ESG — HOSE</div></div>
+    </div>
+    <div class="hero-cta reveal" data-d="2" style="margin-top:2.4rem">
+      <a href="gioi-thieu.html" class="btn btn--accent" data-en="Discover HHPPaper">Khám phá HHPPaper <svg><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div data-chrome="footer"></div>
+<script src="assets/js/chrome.js"></script>
+<script src="assets/js/site.js"></script>
+</body>
+</html>

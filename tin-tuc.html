@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tin tức — HHPPaper</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/sections.css">
+<link rel="stylesheet" href="assets/css/pages.css">
+<link rel="stylesheet" href="assets/css/mobile.css?v=1">
+<style>
+  /* news page-scoped */
+  .news-hero{padding-block:clamp(80px,10vw,140px);background:linear-gradient(180deg,rgba(1,103,177,.88) 0%,rgba(4,48,92,.9) 100%),url('uploads/hhp-paper-haiphong-full-aerial-complex-view.png') center/cover no-repeat;color:#fff;position:relative}
+  .news-hero .wrap{position:relative;z-index:2}
+  .news-hero .breadcrumb a,.news-hero .breadcrumb span{color:rgba(255,255,255,.85)}
+  .news-hero h1{font-size:clamp(2rem,3vw,3.2rem);font-weight:700;color:#fff;line-height:1.15;letter-spacing:-.01em;max-width:22ch;margin-top:.6em}
+  .news-hero p{max-width:60ch;color:rgba(255,255,255,.88);margin-top:.9em;font-size:1rem;line-height:1.6}
+  .news-list-section{padding-block:clamp(56px,7vw,100px)}
+  .news-filter{display:flex;gap:.5em;flex-wrap:wrap;margin-bottom:2.4rem;border-bottom:1px solid var(--line);padding-bottom:1rem}
+  .news-filter button{background:none;border:0;font-family:inherit;font-size:.85rem;font-weight:600;color:var(--text-soft);padding:.6em 1.2em;border-radius:var(--r-pill);cursor:pointer;transition:.2s}
+  .news-filter button.active,.news-filter button:hover{background:var(--primary);color:#fff}
+  .paging{display:flex;justify-content:center;gap:.4em;margin-top:3rem}
+  .paging a{width:38px;height:38px;display:grid;place-items:center;border-radius:8px;font-size:.85rem;font-weight:600;color:var(--text);text-decoration:none;transition:.2s}
+  .paging a:hover,.paging a.active{background:var(--primary);color:#fff}
+</style>
+</head>
+<body data-page="tin-tuc">
+<div data-chrome="header"></div>
+
+<main>
+
+<!-- HERO -->
+<section class="news-hero">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="index.html" data-en="Home">Trang chủ</a><span> / </span><span data-en="News">Tin tức</span></div>
+    <span class="news-eyebrow" style="color:#fff" data-en="Media">Truyền thông</span>
+    <h1 data-en="News, insights & updates from HHPPaper">Tin tức, cập nhật &amp; hoạt động của HHPPaper</h1>
+    <p data-en="Follow our production milestones, industry insights and stories from within HHP GLOBAL's ecosystem.">Theo dõi các cột mốc sản xuất, kiến thức ngành giấy và câu chuyện từ hệ sinh thái HHP GLOBAL.</p>
+  </div>
+</section>
+
+<!-- LIST -->
+<section class="news-list-section">
+  <div class="wrap">
+
+    <!-- filter tabs -->
+    <div class="news-filter">
+      <button class="active" data-cat="all" data-en="All">Tất cả</button>
+      <button data-cat="hhp" data-en="HHPPaper News">Tin HHPPaper</button>
+      <button data-cat="industry" data-en="Paper industry">Tin ngành giấy</button>
+      <button data-cat="esg" data-en="ESG & Sustainability">ESG &amp; Bền vững</button>
+      <button data-cat="event" data-en="Events">Sự kiện</button>
+    </div>
+
+    <!-- featured -->
+    <a class="feat reveal" href="#" style="margin-bottom:2.6rem">
+      <div class="feat__media"><img src="uploads/blog demo.jpg" alt="Tin nổi bật HHPPaper" loading="lazy"></div>
+      <div class="feat__body">
+        <span class="feat__tag" data-en="Featured">Tin nổi bật</span>
+        <h3 data-en="HHPPaper accelerates smart-factory model, becomes tier-1 vendor for global partners">HHPPaper bứt phá với mô hình Nhà máy thông minh, tự hào là Vendor cấp 1 của các đối tác toàn cầu</h3>
+        <p data-en="A milestone marking the transformation journey — HHPPaper reinforces its manufacturing scale and operational capability across the entire ecosystem.">Cột mốc ghi dấu hành trình chuyển đổi — HHPPaper khẳng định quy mô sản xuất và năng lực vận hành trên toàn hệ sinh thái, mở rộng hợp tác với các đối tác toàn cầu.</p>
+        <span class="btn btn--accent" data-en="Read article">Đọc bài viết <svg><use href="#i-arrow"/></svg></span>
+      </div>
+    </a>
+
+    <!-- grid -->
+    <div class="news-grid3">
+      <a class="ncard2 reveal" href="#">
+        <div class="ncard2__media"><img src="uploads/blog demo 2.jpg" alt="Tin HHP" loading="lazy"><span class="ncard2__date">28/07/2026</span></div>
+        <div class="ncard2__body">
+          <h4>Thùng carton 5 lớp: Chống va đập hoàn hảo cho hàng điện tử, gia dụng</h4>
+          <p>Trong chuỗi cung ứng các ngành hàng giá trị cao như linh kiện điện tử, thiết bị thông minh và đồ gia dụng công nghiệp, rủi ro va đập vật lý trong vận chuyển là mối lo ngại hàng đầu…</p>
+          <span class="ncard2__more">Đọc tiếp →</span>
+        </div>
+      </a>
+      <a class="ncard2 reveal" data-d="1" href="#">
+        <div class="ncard2__media"><img src="uploads/blogs demo 3.jpg" alt="Tin HHP" loading="lazy"><span class="ncard2__date">24/07/2026</span></div>
+        <div class="ncard2__body">
+          <h4>Tìm hiểu ưu điểm và tính năng của thùng carton 3 lớp trong việc bảo quản sản phẩm…</h4>
+          <p>Đối với các nhóm hàng hóa nhẹ hơn như thực phẩm đóng hộp, mì gói, nông sản sấy, linh kiện cơ khí thông thường hay hàng may mặc, bao bì đóng gói cần đáp ứng tốt yêu cầu về độ nhẹ, khả năng hút…</p>
+          <span class="ncard2__more">Đọc tiếp →</span>
+        </div>
+      </a>
+      <a class="ncard2 reveal" data-d="2" href="#">
+        <div class="ncard2__media"><img src="uploads/blog demo.jpg" alt="Tin HHP" loading="lazy"><span class="ncard2__date">21/07/2026</span></div>
+        <div class="ncard2__body">
+          <h4>Giải pháp đóng gói tiết kiệm chi phí cho ngành FMCG với thùng carton 3 lớp</h4>
+          <p>Trong ngành hàng tiêu dùng nhanh (FMCG), nơi biên lợi nhuận trên mỗi sản phẩm thường rất mỏng, việc tối ưu hóa mọi chi phí vận hành là ưu tiên sinh tồn của doanh nghiệp B2B…</p>
+          <span class="ncard2__more">Đọc tiếp →</span>
+        </div>
+      </a>
+      <a class="ncard2 reveal" href="#">
+        <div class="ncard2__media"><img src="uploads/hhp-paper-haiphong-solar-panels-rooftop-aerial-01.png" alt="ESG" loading="lazy"><span class="ncard2__date">15/07/2026</span></div>
+        <div class="ncard2__body">
+          <h4>HHPPaper Hải Phòng vận hành hệ thống solar rooftop – dấu ấn năng lượng tái tạo</h4>
+          <p>Hệ thống solar rooftop trên mái nhà máy Hải Phòng cung cấp một phần đáng kể điện năng sản xuất, giảm phát thải CO₂ và củng cố lộ trình NetZero 2035…</p>
+          <span class="ncard2__more">Đọc tiếp →</span>
+        </div>
+      </a>
+      <a class="ncard2 reveal" data-d="1" href="#">
+        <div class="ncard2__media"><img src="uploads/hhpy-aerial-factory-panorama-beach-coastline.jpg" alt="Nhà máy Phú Yên" loading="lazy"><span class="ncard2__date">10/07/2026</span></div>
+        <div class="ncard2__body">
+          <h4>Nhà máy HHPPaper Phú Yên chính thức đi vào vận hành công suất 128.000 tấn/năm</h4>
+          <p>Sự kiện đánh dấu bước tiến chiến lược của HHPPaper tại miền Trung — mở rộng năng lực sản xuất giấy bao bì tái chế và tạo việc làm cho địa phương…</p>
+          <span class="ncard2__more">Đọc tiếp →</span>
+        </div>
+      </a>
+      <a class="ncard2 reveal" data-d="2" href="#">
+        <div class="ncard2__media"><img src="uploads/hhpy-workers-team-holding-hands-unity-hhpy-crane.jpg" alt="Sự kiện" loading="lazy"><span class="ncard2__date">02/07/2026</span></div>
+        <div class="ncard2__body">
+          <h4>Ngày hội gia đình HHPPaper 2026 — Kết nối con người, bồi đắp văn hóa</h4>
+          <p>Chương trình thường niên của HHPPaper với hơn 500 CBNV và gia đình tham gia, thắt chặt tinh thần đồng đội và củng cố văn hóa doanh nghiệp…</p>
+          <span class="ncard2__more">Đọc tiếp →</span>
+        </div>
+      </a>
+    </div>
+
+    <!-- pagination -->
+    <div class="paging">
+      <a href="#" aria-label="Previous">‹</a>
+      <a href="#" class="active">1</a>
+      <a href="#">2</a>
+      <a href="#">3</a>
+      <a href="#" aria-label="Next">›</a>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<div data-chrome="footer"></div>
+
+<script src="assets/js/chrome.js"></script>
+<script src="assets/js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HHPPaper — Vì một thế giới Xanh · Hạnh phúc · Thịnh vượng</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/sections.css">
+<link rel="stylesheet" href="assets/css/pages.css">
+<link rel="stylesheet" href="assets/css/mobile.css?v=1">
+<style>@keyframes fsItemIn{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}</style>
+</head>
+<body>
+
+<!-- ============================ SVG DEFS ============================ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="hhp-mark" viewBox="0 0 120 120">
+      <g fill="var(--mark-fill,#0167B1)">
+        <rect x="35" y="12" width="22" height="96" rx="11"/>
+        <rect x="63" y="12" width="22" height="96" rx="11"/>
+        <rect x="12" y="35" width="96" height="22" rx="11"/>
+        <rect x="12" y="63" width="96" height="22" rx="11"/>
+      </g>
+      <g fill="var(--mark-accent,#00A1DD)">
+        <path d="M57 57 v-7 a7 7 0 0 1 7 7 z"/>
+        <path d="M63 63 v7 a7 7 0 0 1 -7 -7 z"/>
+      </g>
+    </symbol>
+    <!-- icons (stroke, currentColor) -->
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-recycle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 19H4.8a2 2 0 0 1-1.7-3l1.6-2.7M9.4 5.5l1.1-1.9a2 2 0 0 1 3.4 0l1.6 2.7M20.5 13l1.4 2.4a2 2 0 0 1-1.7 3H17M8 8l-3 .8L4.2 6M16 16l3-.8.8 2.8M14.5 5.7l-2.5 1.5"/></symbol>
+    <symbol id="i-factory" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M4 21V9l6 4V9l6 4V6l4-2v17M8 21v-4M14 21v-4"/></symbol>
+    <symbol id="i-leaf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6"/></symbol>
+    <symbol id="i-co2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 0 0-2.5 2.5 2.5 2.5 0 0 0 2.5 2.5M14 9.5h2.2a1.3 1.3 0 0 1 0 2.6h-1.4a1.3 1.3 0 0 0 0 2.6H17"/></symbol>
+    <symbol id="i-water" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.7s6 6.6 6 11a6 6 0 0 1-12 0c0-4.4 6-11 6-11z"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></symbol>
+    <symbol id="i-truck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 5h11v11H2zM13 8h4l3 3v5h-7M5.5 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM17.5 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.6A2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7A2 2 0 0 1 22 16.9z"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h6"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18M7 14l3-4 3 3 5-6"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 15l6-6 6 6"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18z"/></symbol>
+    <symbol id="i-fb" viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V5.5h-3c-2 0-3.5 1.6-3.5 3.6V11H8v3.5h2.5V22H14v-7.5h2.6l.4-3.5H14V9.4c0-.3.2-.4.5-.4z"/></symbol>
+    <symbol id="i-in" viewBox="0 0 24 24" fill="currentColor"><path d="M6.5 8A1.5 1.5 0 1 0 6.5 5a1.5 1.5 0 0 0 0 3zM5 9.5h3V19H5zM10 9.5h2.9v1.3c.4-.7 1.4-1.5 3-1.5 2.6 0 3.6 1.7 3.6 4.3V19h-3v-4.5c0-1.2-.4-2-1.5-2s-1.7.8-1.7 2V19h-3z"/></symbol>
+    <symbol id="i-yt" viewBox="0 0 24 24" fill="currentColor"><path d="M22 8.2a3 3 0 0 0-2.1-2.1C18 5.6 12 5.6 12 5.6s-6 0-7.9.5A3 3 0 0 0 2 8.2 31 31 0 0 0 1.7 12 31 31 0 0 0 2 15.8a3 3 0 0 0 2.1 2.1c1.9.5 7.9.5 7.9.5s6 0 7.9-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 22.3 12 31 31 0 0 0 22 8.2zM10 15V9l5.2 3z"/></symbol>
+  </defs>
+</svg>
+
+<!-- ============================ HEADER ============================ -->
+<div data-chrome="header"></div>
+
+<main id="top">
+
+<!-- ============================ HERO ============================ -->
+<section class="hero hero--video" id="hero">
+  <div class="hero-media">
+    <image-slot id="hero-bg" placeholder="Thả ảnh nền nhà máy (poster) — hoặc dán link video phía dưới" shape="rect"></image-slot>
+    <video id="heroVideo" class="hero-video" autoplay muted loop playsinline></video>
+  </div>
+  <div class="hero-overlay"></div>
+
+  <div class="wrap hero__inner">
+    <div class="hero-copy">
+      <h1 class="reveal" data-d="1">
+        <span class="grad word">Nhà máy sản xuất</span><br>
+        <span class="grad word">bao bì <b>bền vững</b></span>
+      </h1>
+      <p class="hero-lead reveal" style="font-size:16px;width:594px;max-width:100%;text-align:justify;font-weight:300;line-height:1.55" data-d="2" data-en="HHPPaper — a member of HHP GLOBAL — pioneers green production, turning recovered paper into high-quality packaging at industrial scale.">HHPPaper — Thành viên của HHP GLOBAL, Định vị tiên phong sản xuất xanh, biến giấy thu hồi thành giấy bao bì chất lượng cao ở quy mô công nghiệp.</p>
+      <div class="hero-cta reveal" data-d="3">
+        <a href="#contact" class="btn btn--accent" data-en="Request capability profile">Nhận hồ sơ năng lực <svg><use href="#i-arrow"/></svg></a>
+        <a href="san-pham.html" class="btn btn--ghost" style="--fg:#fff;border-color:rgba(255,255,255,.5)" data-en="Explore products">Khám phá sản phẩm</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-scroll"><span data-en="Scroll">Cuộn</span><span class="mouse"></span></div>
+  <div class="hero-videohint" id="heroVideoHint" data-en="▶ Background video — paste your link in HERO_VIDEO_URL (assets/js/site.js)">▶ Video nền — dán link của bạn vào HERO_VIDEO_URL (assets/js/site.js)</div>
+</section>
+
+<!-- ============================ PRODUCTS ============================ -->
+<style>.pcard__link{color:var(--accent)!important;font-weight:600}</style>
+<section class="section prod" id="products">
+  <div class="wrap">
+    <div class="sec-head center">
+    <h2 class="section-title reveal" data-en="Product catalogue">DANH MỤC SẢN PHẨM</h2>
+    <p class="section-intro reveal" data-d="1" data-en="Three core grades of containerboard, all made from recovered fibre.">
+      Ba dòng giấy bao bì chủ lực, sản xuất từ sợi giấy thu hồi.
+    </p>
+    </div>
+
+    <div class="prod-grid">
+      <article class="pcard reveal">
+        <div class="pcard__media"><span class="badge">Medium</span><img src="uploads/MEDIUM.png" alt="Giấy Medium" style="width:100%;height:100%;object-fit:cover"></div>
+        <div class="pcard__body">
+          <h4>Medium</h4>
+          <table class="spec-tbl"><tbody><tr><th>Khổ giấy</th><td>4.200mm</td><td>4.600mm</td></tr><tr><th>Định lượng</th><td>135–220 g/m²</td><td>80–130 g/m²</td></tr></tbody></table><div class="spec-note">*Chia khổ giấy theo yêu cầu của Khách hàng</div>
+          <p data-en="Used as the fluting (corrugating) or middle layer of corrugated cartons.">Dùng làm lớp sóng hoặc lớp giữa thùng carton.</p>
+          <div class="specs"><span class="spec" data-en="Corrugating">Lớp sóng</span><span class="spec">High CMT</span></div>
+          <a href="chi-tiet-medium.html" class="pcard__link" data-en="View specifications">Xem thông số chi tiết <svg><use href="#i-arrow"/></svg></a>
+        </div>
+      </article>
+      <article class="pcard reveal" data-d="1">
+        <div class="pcard__media"><span class="badge">Testliner</span><img src="uploads/TESTLINNER.png" alt="Giấy Testliner" style="width:100%;height:100%;object-fit:cover"></div>
+        <div class="pcard__body">
+          <h4>Testliner</h4>
+          <table class="spec-tbl"><tbody><tr><th>Khổ giấy</th><td>4.200mm</td><td>4.600mm</td></tr><tr><th>Định lượng</th><td>135–220 g/m²</td><td>80–130 g/m²</td></tr></tbody></table><div class="spec-note">*Chia khổ giấy theo yêu cầu của Khách hàng</div>
+          <p data-en="Outer liner for premium cartons, paper bags and packaging that demands strength and finish.">Dùng làm lớp mặt cho thùng carton cao cấp, túi giấy, các sản phẩm bao bì cần độ bền, tính thẩm mỹ cao.</p>
+          <div class="specs"><span class="spec" data-en="Liner">Lớp mặt</span><span class="spec">High burst</span></div>
+          <a href="chi-tiet-testliner.html" class="pcard__link" data-en="View specifications">Xem thông số chi tiết <svg><use href="#i-arrow"/></svg></a>
+        </div>
+      </article>
+      <article class="pcard reveal" data-d="2">
+        <div class="pcard__media"><span class="badge">Kraftliner</span><img src="uploads/KARRAFLINER.png" alt="Giấy Kraftliner" style="width:100%;height:100%;object-fit:cover"></div>
+        <div class="pcard__body">
+          <h4>Kraftliner</h4>
+          <table class="spec-tbl"><tbody><tr><th>Khổ giấy</th><td>4.200mm</td></tr><tr><th>Định lượng</th><td>126–200 g/m²</td></tr></tbody></table><div class="spec-note">*Chia khổ giấy theo yêu cầu của Khách hàng</div>
+          <p data-en="Used as the outer face or inner liner of corrugated cartons.">Dùng làm lớp mặt hoặc lớp lót cho thùng carton.</p>
+          <div class="specs"><span class="spec" data-en="Premium">Cao cấp</span><span class="spec">High strength</span></div>
+          <a href="chi-tiet-kraftliner.html" class="pcard__link" data-en="View specifications">Xem thông số chi tiết <svg><use href="#i-arrow"/></svg></a>
+        </div>
+      </article>
+    </div>
+
+    <div class="prod-extra reveal">
+      <span class="ic" style="background:none;box-shadow:none"><img src="uploads/recycle-icon.png" alt="Tái chế" style="width:80px;height:80px;object-fit:contain"></span>
+      <div>
+        <h4 data-en="Recovered paper (OCC)">Giấy phế liệu (OCC)</h4>
+        <p data-en="Core raw material — carefully selected and blended recovered paper meeting water-resistance, burst, ring-crush and every quality standard published or requested by our customers.">Nguyên liệu cốt lõi, chọn lọc, phối màu, đảm bảo các chỉ tiêu về độ chống thấm, độ bục, độ nén vòng và đáp ứng các tiêu chuẩn chất lượng đã công bố hoặc theo yêu cầu của Khách hàng.</p>
+      </div>
+      <a href="#contact" class="btn btn--ghost" style="--fg:var(--green-700);border-color:var(--green-300)" data-en="Supply to us">Cung ứng cho HHP <svg><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ CAPABILITY ============================ -->
+<section class="section cap" id="capacity" style="background:linear-gradient(160deg,#0167B1 0%,#04305C 100%);color:#fff;position:relative;overflow:hidden">
+  <div style="position:absolute;inset:0;pointer-events:none;opacity:.06"><svg viewBox="0 0 1440 600" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%"><circle cx="200" cy="500" r="320" fill="#fff"/><circle cx="1300" cy="80" r="220" fill="#fff"/></svg></div>
+  <div class="wrap" style="position:relative;z-index:1">
+    <div class="kicker-row"><span class="eyebrow" data-en="HHPPaper factory system" style="color:rgba(255,255,255,.85)">Hệ thống nhà máy <span style="color:var(--primary)">HHP</span><span style="color:var(--accent)">Paper</span></span></div>
+    <h2 class="section-title reveal" data-en="Northern & Central Vietnam factories" style="white-space:nowrap;max-width:none;font-size:clamp(1.4rem,1rem + 1.5vw,2.1rem);color:#fff">NHÀ MÁY MIỀN BẮC &amp; MIỀN TRUNG</h2>
+    <p class="section-intro reveal" data-d="1" data-en="228,000 tonnes of packaging paper a year — strategically placed in Hải Phòng and Đắk Lắk (formerly Phú Yên) to serve customers across Vietnam and for export." style="color:rgba(255,255,255,.85)">Đặt chiến lược tại Hải Phòng và Đắk Lắk (Phú Yên cũ) để phục vụ<br>khách hàng trên toàn Việt Nam và xuất khẩu.</p>
+    <div class="cap-grid">
+      <div class="cap-map reveal"><img class="cap-img" src="assets/vietnam-map.png" alt="Bản đồ Việt Nam — nhà máy HHPPaper tại Hải Phòng và Đăk Lăk (Phú Yên cũ)" loading="lazy"><span class="cap-isl cap-isl--hs"><i></i><i></i><i></i><b data-en="PARACEL ISLANDS">QUẦN ĐẢO</b><em>HOÀNG SA</em></span><span class="cap-isl cap-isl--ts"><i></i><i></i><i></i><b data-en="SPRATLY ISLANDS">QUẦN ĐẢO</b><em>TRƯỜNG SA</em></span></div>
+      <div class="cap-cards">
+        <article class="fac reveal" tabindex="0" style="background:#fff;color:var(--text);border-radius:14px;box-shadow:0 8px 32px rgba(0,0,0,.18)">
+          <div class="fac__media"><img src="uploads/hhp-global-haiphong-main-entrance-gate-signboard-688e5591.png" alt="Nhà máy Hải Phòng" style="width:100%;height:100%;object-fit:cover"></div>
+          <div>
+            <h4 style="font-size:clamp(1.15rem,1vw + .6rem,1.5rem);font-weight:800;color:var(--primary)">Nhà máy <span style="color:var(--primary)">HHP</span><span style="color:var(--accent)">Paper</span> Hải Phòng</h4>
+            <div class="cap-n"><span data-count="100000" data-format="grp">0</span> <b>tấn/năm</b></div>
+            <div class="meta"><span>⬢ <span data-en="Northern port logistics">Logistics cảng phía Bắc</span></span><span>⬢ <span data-en="Export ready">Sẵn sàng xuất khẩu</span></span></div>
+          </div>
+          <div class="fac__detail">
+            <p data-en="Vietnam's first paper mill to achieve LEED Silver (USGBC) certification.">Nhà máy giấy đầu tiên tại Việt Nam đạt LEED Silver (USGBC).</p>
+            <div class="fac__chips"><span data-en="ESG · Green">ESG Xanh</span></div>
+            <a class="fac__link" href="nha-may-hai-phong.html" data-en="View factory details">Xem chi tiết nhà máy <svg><use href="#i-arrow"/></svg></a>
+          </div>
+        </article>
+        <article class="fac reveal" data-d="1" tabindex="0" style="background:#fff;color:var(--text);border-radius:14px;box-shadow:0 8px 32px rgba(0,0,0,.18)">
+          <div class="fac__media"><img src="uploads/Factory HHPpaper Phu Yen-d93d9df3.png" alt="Nhà máy Phú Yên" style="width:100%;height:100%;object-fit:cover"></div>
+          <div>
+            <h4 style="font-size:clamp(1.15rem,1vw + .6rem,1.5rem);font-weight:800;color:var(--primary)">Nhà máy <span style="color:var(--primary)">HHP</span><span style="color:var(--accent)">Paper</span> Phú Yên</h4>
+            <div class="cap-n"><span data-count="128000" data-format="grp">0</span> <b>tấn/năm</b></div>
+            <div class="meta"><span>⬢ <span data-en="ESG · Green">ESG Xanh</span></span><span>⬢ <span data-en="Central region hub">Trung tâm miền Trung</span></span></div>
+          </div>
+          <div class="fac__detail">
+            <p data-en="Applying permanent-magnet motor technology and surface sizing (gia keo màng) — a strategic hub in central Vietnam serving customers and raw-material sources.">Ứng dụng công nghệ nam châm vĩnh cửu, gia keo màng — trung tâm sản xuất chiến lược khu vực miền Trung, đưa mô hình giấy bao bì tái chế xanh của HHP đến gần khách hàng và nguồn nguyên liệu.</p>
+            <div class="fac__chips"><span data-en="ESG · Green">ESG Xanh</span></div>
+            <a class="fac__link" href="nha-may-phu-yen.html" data-en="View factory details">Xem chi tiết nhà máy <svg><use href="#i-arrow"/></svg></a>
+          </div>
+        </article>
+        <div class="cap-total reveal" data-d="2" style="background:linear-gradient(135deg,var(--accent),#e35a2c)!important;border-radius:12px;box-shadow:0 8px 28px rgba(245,116,69,.35)!important">
+          <div class="l" data-en="TOTAL CAPACITY: 228,000 Tonnes/Year" style="font-size:clamp(1.1rem,1vw + .6rem,1.5rem);font-weight:800;letter-spacing:.05em;color:#fff">TỔNG CÔNG SUẤT: 228.000 Tấn/Năm</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <style>
+    @keyframes capMarquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+    .cap-watermark{position:absolute;bottom:0;left:0;right:0;overflow:hidden;pointer-events:none;z-index:0;height:clamp(60px,8vw,110px)}
+    .cap-watermark span{display:inline-block;white-space:nowrap;font-size:clamp(3rem,6vw,7rem);font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.04);line-height:1;animation:capMarquee 25s linear infinite;padding-right:1em}
+  </style>
+  <div class="cap-watermark" aria-hidden="true"><span>NHÀ MÁY MIỀN BẮC &amp; MIỀN TRUNG &nbsp; HỆ THỐNG NHÀ MÁY HHPPAPER &nbsp; NHÀ MÁY MIỀN BẮC &amp; MIỀN TRUNG &nbsp; HỆ THỐNG NHÀ MÁY HHPPAPER &nbsp;</span></div>
+</section>
+
+<!-- ============================ WHY PARTNER ============================ -->
+<section class="section why why--v3" id="why">
+  <div class="wrap">
+    <div class="kicker-row" style="align-items:center;display:flex;margin-bottom:1rem;width:100%"><span class="eyebrow" style="font-size:1.05rem;letter-spacing:.14em" data-en="Partnership foundation">NỀN TẢNG HỢP TÁC</span></div>
+    <h2 class="section-title reveal" style="text-align:center;margin:0 auto 2.6rem;max-width:24ch" data-en="Three pillars behind every collaboration">Ba trụ cột <b style="color:var(--primary)">phía sau mỗi hợp tác</b></h2>
+    <style>
+      .why3-card{border-radius:16px!important;overflow:hidden}
+      .why3-text-panel{margin-top:auto;padding:1rem 1.2rem;background:rgba(255,255,255,.15);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-radius:10px;border:1px solid rgba(255,255,255,.2)}
+      .why3-text-panel .why3-lbl{display:block;margin-bottom:.2em}
+      .why3-text-panel h4{margin:0}
+      /* scroll animation */
+      @keyframes why3FadeUp{from{opacity:0;transform:translateY(40px) scale(.96)}to{opacity:1;transform:none}}
+      .why3-card{opacity:0;transform:translateY(40px) scale(.96)}
+      .why3-card.in-view{animation:why3FadeUp .7s cubic-bezier(.22,1,.36,1) forwards}
+      .why3-card:nth-child(2).in-view{animation-delay:.15s}
+      .why3-card:nth-child(3).in-view{animation-delay:.3s}
+    </style>
+    <div class="why3-grid">
+      <article class="why3-card is-active" style="--img:url('uploads/hhpy-boshan-paper-rewinder-machine-wide-view.jpg')">
+        <img src="uploads/hhpy-boshan-paper-rewinder-machine-wide-view.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;filter:brightness(.7)">
+        <div class="why3-inner"><span class="why3-no">01</span><div class="why3-text-panel"><span class="why3-lbl">TECHNOLOGY</span><h4>Công nghệ hiện đại</h4></div><span class="why3-more">→</span></div>
+      </article>
+      <article class="why3-card" style="--img:url('uploads/hhp-global-executive-woman-presenting-meeting-room.jpg')">
+        <img src="uploads/hhp-global-executive-woman-presenting-meeting-room.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;filter:brightness(.7)">
+        <div class="why3-inner"><span class="why3-no">02</span><div class="why3-text-panel"><span class="why3-lbl">GOVERNANCE</span><h4>Quản trị minh bạch</h4></div><span class="why3-more">→</span></div>
+      </article>
+      <article class="why3-card" style="--img:url('uploads/hhp-paper-haiphong-solar-panels-rooftop-aerial-01.png')">
+        <img src="uploads/hhp-paper-haiphong-solar-panels-rooftop-aerial-01.png" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;filter:brightness(.7)">
+        <div class="why3-inner"><span class="why3-no">03</span><div class="why3-text-panel"><span class="why3-lbl">SUSTAINABILITY</span><h4>Phát triển bền vững</h4></div><span class="why3-more">→</span></div>
+      </article>
+    </div>
+    <div class="why3-desc">
+      <p class="why3-p is-active">Tốc độ vận hành lên tới <b>650 m/ph</b>; tự động hoá <b>98%</b>; hệ thống kiểm soát chất lượng nghiêm ngặt, mang đến sản phẩm ổn định.</p>
+      <p class="why3-p">Thành viên của <b>HHP GLOBAL</b> – doanh nghiệp niêm yết HOSE (mã HHP); vận hành theo tiêu chuẩn quản trị hiện đại, đảm bảo nguồn cung dài hạn.</p>
+      <p class="why3-p">Tiên phong sản xuất xanh với <b>LEED Silver</b>, FSC®, ISO; áp dụng mô hình kinh tế tuần hoàn và hướng tới <b>Net Zero 2035</b>.</p>
+    </div>
+  </div>
+</section>
+<script>(function(){const cards=document.querySelectorAll('.why3-card');const ps=document.querySelectorAll('.why3-p');cards.forEach((c,i)=>c.addEventListener('click',()=>{cards.forEach(x=>x.classList.remove('is-active'));ps.forEach(x=>x.classList.remove('is-active'));c.classList.add('is-active');ps[i].classList.add('is-active')}));const io=new IntersectionObserver(ents=>{ents.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in-view');io.unobserve(e.target)}})},{threshold:.15});cards.forEach(c=>io.observe(c))})();</script>
+
+<!-- ============================ INVESTORS / PARTNERS ============================ -->
+<section class="section inv" id="investors">
+  <div class="wrap">
+    <div class="kicker-row" style="align-items:center!important;display:flex!important;width:100%;margin:0 auto 1rem;text-align:center"><span class="eyebrow" style="font-size:1.35rem;letter-spacing:.14em;text-align:center;font-weight:800" data-en="Trusted by partners & customers">ĐƯỢC TIN TƯỞNG BỞI ĐỐI TÁC &amp; KHÁCH HÀNG</span></div>
+
+    <div class="partners">
+      <div class="partner-marquee reveal" data-d="1">
+        <div class="partner-marquee__track">
+          <div class="partner-logo"><span style="color:#b31b1b;font-weight:800;font-size:.85rem;letter-spacing:.02em">華南銀行<br><span style="font-size:.65rem;font-weight:600">HUA NAN BANK</span></span></div>
+          <div class="partner-logo"><span style="color:#00a54f;font-weight:900;font-size:1.2rem;letter-spacing:-.02em">VP<span style="color:#005bac">Bank</span></span></div>
+          <div class="partner-logo"><span style="color:#003087;font-weight:800;font-size:.85rem;text-align:center;line-height:1.3">WOORI<br>BANK</span></div>
+          <div class="partner-logo"><span style="color:#2d7a2d;font-weight:800;font-size:.9rem;text-align:center;line-height:1.3">First<br>Bank</span></div>
+          <div class="partner-logo"><span style="color:#003087;font-weight:700;font-size:.72rem;text-align:center;line-height:1.4">Industrial<br>Bank of Korea</span></div>
+          <div class="partner-logo"><span style="color:#c8152b;font-weight:900;font-size:1rem;letter-spacing:-.01em">Vietin<span style="color:#003087">Bank</span></span></div>
+          <div class="partner-logo"><span style="color:#f05a24;font-weight:900;font-size:1.4rem;letter-spacing:.08em">YUTO</span></div>
+          <div class="partner-logo"><span style="color:#003087;font-weight:900;font-size:1.6rem;letter-spacing:-.03em">PAN<span style="color:#c8152b;font-size:1rem">★</span></span></div>
+          <div class="partner-logo"><span style="color:#003087;font-weight:700;font-size:.78rem;text-align:center;line-height:1.4">B&amp;B Pack<br>Go Ltd</span></div>
+          <div class="partner-logo"><span style="color:#006633;font-weight:800;font-size:.8rem;text-align:center;line-height:1.4">SAIGON<br>DRAGON</span></div>
+          <!-- duplicate for loop -->
+          <div class="partner-logo"><span style="color:#b31b1b;font-weight:800;font-size:.85rem;letter-spacing:.02em">華南銀行<br><span style="font-size:.65rem;font-weight:600">HUA NAN BANK</span></span></div>
+          <div class="partner-logo"><span style="color:#00a54f;font-weight:900;font-size:1.2rem;letter-spacing:-.02em">VP<span style="color:#005bac">Bank</span></span></div>
+          <div class="partner-logo"><span style="color:#003087;font-weight:800;font-size:.85rem;text-align:center;line-height:1.3">WOORI<br>BANK</span></div>
+          <div class="partner-logo"><span style="color:#2d7a2d;font-weight:800;font-size:.9rem;text-align:center;line-height:1.3">First<br>Bank</span></div>
+          <div class="partner-logo"><span style="color:#003087;font-weight:700;font-size:.72rem;text-align:center;line-height:1.4">Industrial<br>Bank of Korea</span></div>
+          <div class="partner-logo"><span style="color:#c8152b;font-weight:900;font-size:1rem;letter-spacing:-.01em">Vietin<span style="color:#003087">Bank</span></span></div>
+          <div class="partner-logo"><span style="color:#f05a24;font-weight:900;font-size:1.4rem;letter-spacing:.08em">YUTO</span></div>
+          <div class="partner-logo"><span style="color:#003087;font-weight:900;font-size:1.6rem;letter-spacing:-.03em">PAN<span style="color:#c8152b;font-size:1rem">★</span></span></div>
+          <div class="partner-logo"><span style="color:#003087;font-weight:700;font-size:.78rem;text-align:center;line-height:1.4">B&amp;B Pack<br>Go Ltd</span></div>
+          <div class="partner-logo"><span style="color:#006633;font-weight:800;font-size:.8rem;text-align:center;line-height:1.4">SAIGON<br>DRAGON</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ CERTIFICATES ============================ -->
+<section class="section" id="chung-chi" style="scroll-margin-top:80px;background:var(--paper-50)">
+  <div class="wrap">
+    <div class="kicker-row" style="text-align:center!important;align-items:center!important;display:flex!important;margin-bottom:2.6rem;width:100%"><span class="eyebrow" style="font-size:1.35rem;letter-spacing:.14em;font-weight:800" data-en="Certification system">HỆ THỐNG CHỨNG CHỈ</span></div>
+    <div class="val-grid reveal" data-d="1" style="display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(14px,1.8vw,22px);grid-auto-rows:360px;align-items:stretch">
+      <div class="val-card" style="padding:0;overflow:hidden;display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:var(--r-lg)"><div style="flex:1;min-height:0;background:#fff;overflow:hidden"><img src="uploads/ISO%209001%202015.png" alt="ISO 9001:2015" style="width:100%;height:100%;object-fit:contain;display:block;padding:14px"></div><div style="padding:16px 18px;flex:none;min-height:80px"><h4 style="font-size:1.05rem">ISO 9001:2015</h4><p style="font-size:.84rem;color:var(--text-soft);margin-top:.2em" data-en="Quality management">Quản lý chất lượng</p></div></div>
+      <div class="val-card" style="padding:0;overflow:hidden;display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:var(--r-lg)"><div style="flex:1;min-height:0;background:#fff;overflow:hidden"><img src="uploads/ISO%2014001%202015.png" alt="ISO 14001:2015" style="width:100%;height:100%;object-fit:contain;display:block;padding:14px"></div><div style="padding:16px 18px;flex:none;min-height:80px"><h4 style="font-size:1.05rem">ISO 14001:2015</h4><p style="font-size:.84rem;color:var(--text-soft);margin-top:.2em" data-en="Environmental management">Quản lý môi trường</p></div></div>
+      <div class="val-card" style="padding:0;overflow:hidden;display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:var(--r-lg)"><div style="flex:1;min-height:0;background:#fff;overflow:hidden"><img src="uploads/lead%20silver.png" alt="LEED Silver" style="width:100%;height:100%;object-fit:contain;display:block;padding:14px"></div><div style="padding:16px 18px;flex:none;min-height:80px"><h4 style="font-size:1.05rem">LEED Silver</h4><p style="font-size:.84rem;color:var(--text-soft);margin-top:.2em" data-en="Green building — US Green Building Council">Công trình xanh · US Green Building Council</p></div></div>
+      <div class="val-card" style="padding:0;overflow:hidden;display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:var(--r-lg)"><div style="flex:1;min-height:0;background:#fff;overflow:hidden"><img src="uploads/Prix%20et%20certifications.png" alt="Giải thưởng và chứng nhận" style="width:100%;height:100%;object-fit:contain;display:block;padding:14px"></div><div style="padding:16px 18px;flex:none;min-height:80px"><h4 style="font-size:1.05rem" data-en="Awards">Giải thưởng &amp; chứng nhận</h4><p style="font-size:.84rem;color:var(--text-soft);margin-top:.2em" data-en="Quality awards">Sản phẩm &amp; doanh nghiệp tiêu biểu</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ NEWS ============================ -->
+<section class="section news" id="news">
+  <div class="wrap">
+    <div class="news-head reveal" style="text-align:center;margin-bottom:2.6rem">
+      <h2 class="section-title" data-en="News &amp; activities" style="max-width:none">TIN TỨC VÀ HOẠT ĐỘNG</h2>
+    </div>
+
+    <!-- FEATURED -->
+    <a class="feat reveal" data-d="1" href="#">
+      <div class="feat__media"><img src="uploads/HHP Papper phu yen blog.jpg" alt="Tin nổi bật HHPPaper" loading="lazy"></div>
+      <div class="feat__body">
+        <span class="feat__tag"><svg style="width:14px;height:14px"><use href="#i-doc"/></svg> <span data-en="Featured">Tin nổi bật</span></span>
+        <h3 data-en="HHPPaper accelerates smart-factory model, becomes tier-1 vendor for global partners">HHPPaper bứt phá với mô hình Nhà máy thông minh, tự hào là Vendor cấp 1 của các đối tác toàn cầu</h3>
+        <p data-en="A milestone marking the transformation journey — HHPPaper reinforces its manufacturing scale and operational capability across the entire ecosystem.">Cột mốc ghi dấu hành trình chuyển đổi — HHPPaper khẳng định quy mô sản xuất và năng lực vận hành trên toàn hệ sinh thái, mở rộng hợp tác với các đối tác toàn cầu.</p>
+        <span class="btn btn--accent" data-en="Read article">Đọc bài viết <svg><use href="#i-arrow"/></svg></span>
+      </div>
+    </a>
+
+    <!-- SUB CARDS -->
+    <div class="news-grid3">
+      <a class="ncard2 reveal" href="#">
+        <div class="ncard2__media"><img src="uploads/blog demo 2.jpg" alt="Tin HHP" loading="lazy"><span class="ncard2__date">28/07/2026</span></div>
+        <div class="ncard2__body">
+          <h4 data-en="5-ply cartons: perfect impact protection for electronics &amp; appliances">Thùng carton 5 lớp: Chống va đập hoàn hảo cho hàng điện tử, gia dụng</h4>
+          <p data-en="Supply chains for high-value electronics demand precise carton systems that eliminate damage risk in every transit leg.">Trong chuỗi cung ứng các ngành hàng giá trị cao như linh kiện điện tử, thiết bị thông minh và đồ gia dụng công nghiệp, rủi ro va đập vật lý trong vận chuyển là mối lo ngại hàng đầu…</p>
+          <span class="ncard2__more" data-en="Read more">Đọc tiếp →</span>
+        </div>
+      </a>
+      <a class="ncard2 reveal" data-d="1" href="#">
+        <div class="ncard2__media"><img src="uploads/blogs demo 3.jpg" alt="Tin HHP" loading="lazy"><span class="ncard2__date">24/07/2026</span></div>
+        <div class="ncard2__body">
+          <h4 data-en="3-ply corrugated: strengths &amp; roles in FMCG protection">Tìm hiểu ưu điểm và tính năng của thùng carton 3 lớp trong việc bảo quản sản phẩm…</h4>
+          <p data-en="For FMCG, food, dry goods and light industry — 3-ply corrugated remains the workhorse for cost-effective, reliable packaging.">Đối với các nhóm hàng hóa nhẹ hơn như thực phẩm đóng hộp, mì gói, nông sản sấy, linh kiện cơ khí thông thường hay hàng may mặc, bao bì đóng gói cần đáp ứng tốt yêu cầu về độ nhẹ, khả năng hút…</p>
+          <span class="ncard2__more" data-en="Read more">Đọc tiếp →</span>
+        </div>
+      </a>
+      <a class="ncard2 reveal" data-d="2" href="#">
+        <div class="ncard2__media"><img src="uploads/blog demo.jpg" alt="Tin HHP" loading="lazy"><span class="ncard2__date">21/07/2026</span></div>
+        <div class="ncard2__body">
+          <h4 data-en="Cost-effective FMCG packaging: 3-ply cartons as the total-cost winner">Giải pháp đóng gói tiết kiệm chi phí cho ngành FMCG với thùng carton 3 lớp</h4>
+          <p data-en="For fast-moving consumer goods with slim margins, packaging directly impacts unit economics. 3-ply corrugated hits the sweet spot on strength and cost.">Trong ngành hàng tiêu dùng nhanh (FMCG), nơi biên lợi nhuận trên mỗi sản phẩm thường rất mỏng, việc tối ưu hóa mọi chi phí vận hành là ưu tiên sinh tồn của doanh nghiệp B2B…</p>
+          <span class="ncard2__more" data-en="Read more">Đọc tiếp →</span>
+        </div>
+      </a>
+    </div>
+    <div class="news-cta reveal" data-d="3" style="display:flex;gap:14px;justify-content:flex-start;margin-top:2.4rem;flex-wrap:wrap">
+      <a href="#" class="btn btn--accent" data-en="HHPPaper news">Tin tức HHPPaper <svg><use href="#i-arrow"/></svg></a>
+      <a href="#" class="btn btn--ghost" data-en="Paper industry news">Tin tức ngành giấy <svg><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+<!-- ============================ CTA + FORM ============================ -->
+<section class="section cta" id="contact" style="background:linear-gradient(135deg,rgba(1,103,177,.9) 0%,rgba(4,48,92,.94) 100%),url('uploads/hhp-paper-haiphong-full-aerial-complex-view.png') center/cover no-repeat;padding-block:clamp(48px,6vw,90px)">
+  <div class="motif" id="ctaMotif">
+    <svg viewBox="0 0 1440 600" preserveAspectRatio="xMidYMid slice" style="opacity:.55">
+      <path d="M-80 380 C 320 240 540 480 920 320 C 1200 200 1340 360 1620 250 L 1620 640 L -80 640 Z" fill="rgba(0,161,221,.30)"/>
+      <path d="M820 -40 C 1020 110 940 320 1160 410 C 1340 484 1500 380 1560 200 L 1560 -90 L 820 -90 Z" fill="rgba(255,255,255,.10)"/>
+    </svg>
+  </div>
+  <div class="wrap cta-grid">
+    <div>
+      <h2 class="reveal" data-en="HHPPAPER">HHPPAPER</h2>
+      <p class="cta-lead reveal" data-d="1" data-en="Leave your details and we'll send the full HHPPaper capability profile — capacity, products, certifications and ESG commitments.">
+        Để lại thông tin, chúng tôi sẽ gửi bạn hồ sơ năng lực đầy đủ của HHPPaper — công suất, sản phẩm, chứng nhận và cam kết ESG.
+      </p>
+      <ul class="cta-points reveal" data-d="2">
+        <li><span class="ck"><svg><use href="#i-check"/></svg></span><span data-en="Detailed capacity & product specs">Thông số công suất & sản phẩm chi tiết</span></li>
+        <li><span class="ck"><svg><use href="#i-check"/></svg></span><span data-en="ESG & NetZero 2035 commitments">Cam kết ESG & NetZero 2035</span></li>
+        <li><span class="ck"><svg><use href="#i-check"/></svg></span><span data-en="A dedicated B2B contact within 24h">Liên hệ B2B chuyên trách trong 24h</span></li>
+      </ul>
+    </div>
+
+    <form class="form-card reveal" data-d="1" id="leadForm" novalidate>
+      <div id="formBody">
+        <h3 data-en="Request capability profile">Nhận hồ sơ năng lực</h3>
+        <p class="fc-sub" data-en="Fields marked * are required.">Các trường có dấu * là bắt buộc.</p>
+        <div class="form-grid">
+          <div class="field"><label data-en="Full name *">Họ và tên *</label><input name="name" required data-en-ph="Your name" placeholder="Tên của bạn"><span class="err" data-en="Please enter your name">Vui lòng nhập tên</span></div>
+          <div class="field"><label data-en="Company">Công ty</label><input name="company" data-en-ph="Company name" placeholder="Tên công ty"></div>
+          <div class="field"><label data-en="Email *">Email *</label><input name="email" type="email" required data-en-ph="you@company.com" placeholder="ban@congty.com"><span class="err" data-en="Enter a valid email">Email chưa hợp lệ</span></div>
+          <div class="field"><label data-en="Phone">Điện thoại</label><input name="phone" data-en-ph="Phone number" placeholder="Số điện thoại"></div>
+          <div class="field full"><label data-en="I'm interested in">Tôi quan tâm đến</label>
+            <select name="topic">
+              <option data-en="Buying packaging paper">Mua giấy bao bì</option>
+              <option data-en="Supplying recovered paper">Cung ứng giấy thu hồi</option>
+              <option data-en="Investor / shareholder relations">Quan hệ cổ đông / đầu tư</option>
+              <option data-en="Other partnership">Hợp tác khác</option>
+            </select>
+          </div>
+          <div class="field full"><label data-en="Message">Lời nhắn</label><textarea name="msg" data-en-ph="Tell us about your needs…" placeholder="Cho chúng tôi biết nhu cầu của bạn…"></textarea></div>
+        </div>
+        <button type="submit" class="btn btn--accent btn--lg form-submit" style="width:100%" data-en="Send & receive profile">Gửi & nhận hồ sơ <svg><use href="#i-arrow"/></svg></button>
+      </div>
+      <div class="form-success" id="formSuccess">
+        <div class="ck"><svg style="width:30px;height:30px"><use href="#i-check"/></svg></div>
+        <h3 data-en="Thank you!">Cảm ơn bạn!</h3>
+        <p class="fc-sub" data-en="We've received your request. The HHPPaper team will reach out within 24 hours.">Chúng tôi đã nhận thông tin. Đội ngũ HHPPaper sẽ liên hệ trong vòng 24 giờ.</p>
+      </div>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- ============================ FOOTER ============================ -->
+<div data-chrome="footer"></div>
+
+<!-- tweaks panel mount -->
+<div id="tweaks-root"></div>
+
+<!-- thumbnail for bundler -->
+<template id="__bundler_thumbnail">
+  <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="120" rx="20" fill="#0167B1"/><g transform="translate(18,18) scale(.7)"><g fill="#fff"><rect x="35" y="12" width="22" height="96" rx="11"/><rect x="63" y="12" width="22" height="96" rx="11"/><rect x="12" y="35" width="96" height="22" rx="11"/><rect x="12" y="63" width="96" height="22" rx="11"/></g></g></svg>
+</template>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="image-slot.js"></script>
+<script src="assets/js/chrome.js"></script>
+<script src="assets/js/site.js"></script>
+<script>
+(function(){
+  const $=(s,c)=>(c||document).querySelector(s);
+  const $$=(s,c)=>Array.from((c||document).querySelectorAll(s));
+  const slides=$$('.fac-slide'),inds=$$('.fac-ind');
+  if(!slides.length)return;
+  function fmt(v){return v>=1000?Math.round(v).toLocaleString('vi-VN'):String(Math.round(v));}
+  function runCounters(slide){$$('[data-count]',slide).forEach(el=>{const target=parseFloat(el.dataset.count),dur=1200,t0=performance.now();(function tick(now){const p=Math.min(1,(now-t0)/dur),e=1-Math.pow(1-p,3);el.textContent=fmt(target*e);if(p<1)requestAnimationFrame(tick);else el.textContent=fmt(target);})(t0);});}
+  function stagger(slide){['.fs-label','.fs-sub','.fs-h','.fs-desc','.fs-counters','.fs-badge','.fs-cta','.fs-map'].forEach((s,i)=>{const el=$(s,slide);if(!el)return;el.style.animation='none';el.offsetHeight;el.style.animation=`fsItemIn .5s ${50+i*70}ms var(--ease-out,cubic-bezier(.16,1,.3,1)) both`;});}
+  let cur=0;
+  function goTo(i){slides[cur].classList.remove('active');inds[cur].classList.remove('active');cur=(i+slides.length)%slides.length;slides[cur].classList.add('active');inds[cur].classList.add('active');stagger(slides[cur]);setTimeout(()=>runCounters(slides[cur]),80);}
+  inds.forEach((b,i)=>b.addEventListener('click',()=>goTo(i)));
+  let scrollLocked=false;
+  const sec=$('#capacity');
+  if(sec)sec.addEventListener('wheel',(e)=>{if(scrollLocked)return;const dir=e.deltaY>0?1:-1,next=cur+dir;if(next<0||next>=slides.length)return;e.preventDefault();scrollLocked=true;goTo(next);setTimeout(()=>scrollLocked=false,900);},{passive:false});
+  let touchY=0;
+  if(sec){sec.addEventListener('touchstart',e=>{touchY=e.touches[0].clientY;},{passive:true});sec.addEventListener('touchend',e=>{const dy=touchY-e.changedTouches[0].clientY;if(Math.abs(dy)<40)return;const dir=dy>0?1:-1,next=cur+dir;if(next>=0&&next<slides.length)goTo(next);},{passive:true});}
+  stagger(slides[0]);setTimeout(()=>runCounters(slides[0]),80);
+})();
+</script>
+</body>
+</html>

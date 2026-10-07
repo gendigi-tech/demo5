@@ -1,0 +1,163 @@
+/* ============================================================
+   MOBILE FIXES — mobile-first refinement across all pages
+   Applied for viewport ≤ 760px, refined at 480px & 380px
+   ============================================================ */
+
+/* Prevent horizontal scroll everywhere */
+html,body{max-width:100vw;overflow-x:hidden}
+img,svg,video,iframe{max-width:100%;height:auto}
+
+/* Wrap uses percentage padding, avoid huge gutter */
+@media (max-width:760px){
+  :root{--gutter:16px}
+  .wrap{padding-inline:16px}
+
+  /* HEADER: compact, sticky, keep logo readable */
+  .header__inner{padding-block:10px}
+  .brand-logo{width:110px!important;height:auto}
+  .header-actions{gap:8px}
+  .header .btn{padding:.55em 1em;font-size:.78rem}
+  .lang{transform:scale(.9);transform-origin:right center}
+
+  /* HERO: tighter type, no huge min-height */
+  .hero,.page-hero,.cs-hero{min-height:auto!important}
+  .hero__inner,.page-hero__inner,.cs-hero__inner{padding-block:clamp(60px,14vw,90px) clamp(40px,10vw,64px)}
+  .hero h1{font-size:clamp(1.7rem,7vw,2.4rem)!important;line-height:1.22}
+  .page-hero h1{font-size:clamp(1.7rem,7vw,2.4rem)!important;line-height:1.22}
+  .cs-hero__title .cs-hero__ln1{font-size:clamp(1.6rem,6.5vw,2.1rem)!important}
+  .cs-hero__title .cs-hero__ln2{font-size:clamp(1.6rem,6.5vw,2.1rem)!important}
+  .hero-lead,.page-hero p,.cs-hero__lead{font-size:.98rem;line-height:1.6}
+  .hero-cta{flex-wrap:wrap;gap:10px}
+  .hero-cta .btn{width:100%;justify-content:center}
+  .hero-scroll{display:none}
+
+  /* SECTION spacing */
+  .section{padding-block:clamp(48px,10vw,72px)}
+  .section-title,h2.section-title{font-size:clamp(1.5rem,6vw,2rem)!important;line-height:1.25}
+
+  /* GRID: force everything to 1 column on phone */
+  .cap-grid,.split,.split.reverse,.hero-grid,.value3,.perk-grid,
+  .ve-hhp-inner,.pd-grid,.cta-grid,.footer-grid,.form-grid,
+  .why-grid,.news-grid,.news-grid3,.feat,.pd-matrix,
+  .ceo-v2-inner,.milestone-panel__grid,.chapter-grid,
+  .fac-grid,.eco-detail,.info-table .row{grid-template-columns:1fr!important}
+  .split.reverse{direction:ltr}
+
+  /* MAP + CAP CARDS */
+  .cap-map{max-width:340px;margin:0 auto}
+  .cap-cards{gap:14px}
+  .fac{padding:14px}
+  .fac__media{width:100%;height:180px;position:static;margin-bottom:12px}
+  .cap-total{padding:14px 18px;text-align:center}
+  .cap-isl{font-size:.62rem!important;transform:scale(.75);transform-origin:right top}
+
+  /* WHY cards + certificates */
+  .why-card{padding:22px}
+  .cert-grid{grid-template-columns:repeat(2,1fr);gap:10px}
+  .cert-slot{aspect-ratio:1/1}
+
+  /* FEAT + news */
+  .feat__media{aspect-ratio:16/10}
+  .feat__body{padding:22px}
+  .feat__body h3{font-size:1.15rem}
+  .ncard2__media{aspect-ratio:16/10}
+
+  /* PARTNERS marquee: reduce logo size */
+  .partner-logo img{max-height:44px}
+
+  /* CEO quote v2 */
+  .ceo-v2-photo{max-width:280px;margin:0 auto 20px}
+  .ceo-v2-quote{font-size:1.05rem;line-height:1.55}
+  .ceo-v2-sig{text-align:left}
+
+  /* PRODUCT DETAIL tables — allow horizontal scroll gracefully */
+  .pd-specs,.pd-matrix-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .pd-table,.pd-matrix{min-width:520px}
+
+  /* INVESTOR / IR */
+  .listing{grid-template-columns:1fr!important}
+  .stock-widget{padding:16px}
+  .ir-tabs{overflow-x:auto;-webkit-overflow-scrolling:touch;flex-wrap:nowrap}
+  .ir-tab{white-space:nowrap;flex:none}
+
+  /* JOBS */
+  .job{grid-template-columns:1fr;padding:18px;gap:14px}
+  .job .btn{width:100%;justify-content:center}
+
+  /* CTA & FORM */
+  .cta-band__art{display:none}
+  .form-grid{gap:12px}
+  .btn--lg{width:100%;justify-content:center}
+
+  /* CHAPTER cards (câu chuyện) */
+  .chapter,.chapter.full{grid-column:1/-1!important}
+  .chapter__img{aspect-ratio:16/10;min-height:160px}
+  .chapter__body{padding:20px}
+
+  /* MILESTONE panel dark */
+  .milestone-panel{padding:24px 18px}
+  .ms-card{padding:20px}
+
+  /* FOOTER */
+  .footer-grid{gap:24px}
+
+  /* Reduce heavy paddings on inline-styled sections */
+  section[style*="scroll-margin-top"]{padding-inline:0}
+
+  /* Section eyebrows/kickers */
+  .eyebrow{font-size:.7rem}
+
+  /* Gallery */
+  .gallery{grid-template-columns:1fr 1fr;gap:10px}
+  .gallery > *{aspect-ratio:1/1}
+}
+
+@media (max-width:480px){
+  .brand-logo{width:96px!important}
+  .header .btn{padding:.5em .8em;font-size:.72rem}
+  h1{font-size:1.6rem!important;line-height:1.22}
+  .section-title{font-size:1.4rem!important}
+  .hero-stat .n,.hero-stat b{font-size:1.6rem}
+  .fs-counter .n{font-size:1.8rem!important}
+  .cap-n span{font-size:2rem!important}
+  .why-card{padding:18px}
+  .feat__body,.ncard2__body{padding:18px}
+  .job h4{font-size:1rem}
+  .cs-hero__title .cs-hero__ln1,.cs-hero__title .cs-hero__ln2{font-size:1.5rem!important}
+  .partner-logo img{max-height:36px}
+  .gallery{grid-template-columns:1fr;gap:12px}
+  .gallery > *{aspect-ratio:16/10}
+  .fac__no{font-size:.7rem}
+  .fac h4{font-size:1.05rem}
+}
+
+/* very narrow phones */
+@media (max-width:380px){
+  .header-actions{gap:6px}
+  .lang{display:none}
+  .brand-logo{width:86px!important}
+  .wrap{padding-inline:14px}
+}
+
+/* MOBILE HEADER: logo center, menu left (hamburger), lang right */
+@media (max-width:760px){
+  .header__inner{display:flex!important;align-items:center;justify-content:space-between;gap:8px;padding-block:10px!important}
+  .header-actions{display:flex!important;align-items:center;gap:8px}
+  .header .btn--accent{display:none!important}
+  .brand{display:flex!important;align-items:center;padding:0;margin:0;line-height:0}
+  .brand-logo{width:auto!important;height:38px!important;display:block;max-width:130px;object-fit:contain}
+  .brand-logo--white{display:none!important}
+  .menu-toggle{display:grid!important;place-items:center;width:38px;height:38px;background:transparent;border:1px solid var(--line);border-radius:10px}
+  .menu-toggle span,.menu-toggle span::before,.menu-toggle span::after{background:var(--text)}
+  .nav{display:none}
+  .header.menu-open .nav{display:flex!important;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;background:#fff;border-top:1px solid var(--line);box-shadow:0 20px 40px -20px rgba(0,0,0,.2);padding:8px 0;z-index:60;max-height:75vh;overflow-y:auto}
+  .nav-item{border-bottom:1px solid var(--line)}
+  .nav-item:last-child{border-bottom:0}
+  .nav-top{display:flex!important;justify-content:space-between;align-items:center;padding:14px 20px;font-weight:600}
+  .nav-item:has(.dropdown) > .nav-top::after{content:"+"!important;font-size:1.4rem!important;font-weight:400!important;line-height:1!important;opacity:.55!important;transform:none!important;border:0!important;width:auto!important;height:auto!important;color:var(--primary)!important}
+  .nav-item.open > .nav-top::after{content:"−"!important}
+  .nav-item .dropdown{display:none!important;position:static!important;box-shadow:none!important;background:var(--paper-50)!important;padding:0!important;border-radius:0!important;border:0!important;min-width:0!important;opacity:1!important;visibility:visible!important;transform:none!important}
+  .nav-item.open .dropdown{display:flex!important;flex-direction:column}
+  .nav-item .dropdown a{padding:12px 32px;font-size:.9rem;color:var(--text-soft);border-bottom:1px solid var(--line)}
+  .nav-item .dropdown a:last-child{border-bottom:0}
+}

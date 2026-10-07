@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nhà đầu tư — HHPPaper (HSX: HHP)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/sections.css">
+<link rel="stylesheet" href="assets/css/pages.css">
+<link rel="stylesheet" href="assets/css/mobile.css?v=1">
+</head>
+<body data-page="nha-dau-tu">
+<div data-chrome="header"></div>
+
+<main>
+  <section class="page-hero page-hero--split" data-screen-label="Nhà đầu tư">
+    <div class="page-hero__art"><svg style="--mark-fill:#fff;--mark-accent:#cfeefb"><use href="#hhp-mark"/></svg></div>
+    <div class="wrap page-hero__inner">
+      <div class="page-hero__copy">
+        <div class="breadcrumb"><a href="index.html" data-en="Home">Trang chủ</a><span>/</span><span data-en="Investors">Nhà đầu tư</span></div>
+        <span class="eyebrow" data-en="Investor relations">Quan hệ nhà đầu tư</span>
+        <h1 data-en="A listed company built on transparency">Doanh nghiệp niêm yết, minh bạch</h1>
+        <p data-en="Listed on HOSE as HHP — corporate information, disclosures, reports and shareholder support, all in one place.">Niêm yết trên HOSE với mã HHP — thông tin doanh nghiệp, công bố, báo cáo và hỗ trợ cổ đông, tất cả tại một nơi.</p>
+      </div>
+      <div class="page-hero__media"><image-slot id="ndt-media" placeholder="Thả ảnh trụ sở / sự kiện cổ đông" shape="rect"></image-slot></div>
+    </div>
+  </section>
+
+  <!-- TAB BAR -->
+  <div class="ir-tabbar">
+    <div class="wrap">
+      <button class="ir-tab active" data-tab="info" data-en="Company info">Thông tin doanh nghiệp</button>
+      <button class="ir-tab" data-tab="cbtt" data-en="Disclosures">Công bố thông tin</button>
+      <button class="ir-tab" data-tab="dhdcd" data-en="AGM">Đại hội đồng cổ đông</button>
+      <button class="ir-tab" data-tab="bctc" data-en="Financial reports">Báo cáo tài chính</button>
+      <button class="ir-tab" data-tab="bctn" data-en="Annual reports">Báo cáo thường niên</button>
+      <button class="ir-tab" data-tab="help" data-en="Shareholder support">Trợ giúp cổ đông</button>
+    </div>
+  </div>
+
+  <!-- ===== TAB 1: THÔNG TIN DOANH NGHIỆP ===== -->
+  <div class="ir-panel active" id="tab-info">
+    <section class="section" style="scroll-margin-top:80px">
+      <div class="wrap">
+        <span class="eyebrow" data-en="Listing information">Thông tin niêm yết</span>
+        <div class="listing">
+          <div class="listing__photo"><image-slot id="ir-hq" placeholder="Ảnh trụ sở HHP Global" shape="rect"></image-slot></div>
+          <div class="info-table">
+            <div class="row"><span class="k" data-en="Trading name">Tên giao dịch</span><span class="v">Công ty Cổ phần HHP <b>GLOBAL</b></span></div>
+            <div class="row"><span class="k" data-en="English name">Tên tiếng Anh</span><span class="v">HHP <b>GLOBAL</b> Joint Stock Company</span></div>
+            <div class="row"><span class="k" data-en="Abbreviation">Tên viết tắt</span><span class="v">HHP <b>GLOBAL</b></span></div>
+            <div class="row"><span class="k" data-en="Business reg. no.">Giấy ĐKKD số</span><span class="v">0201282851</span></div>
+            <div class="row"><span class="k" data-en="Ticker">Mã CK</span><span class="v">HHP</span></div>
+            <div class="row"><span class="k" data-en="Charter capital">Vốn điều lệ</span><span class="v">865.543.430.000 đồng</span></div>
+            <div class="row"><span class="k" data-en="Shares outstanding">Số CP đang lưu hành</span><span class="v">86.554.343</span></div>
+            <div class="row"><span class="k" data-en="Head office">Trụ sở chính</span><span class="v">Số 194 đường Kiều Hạ, P. Đông Hải, TP. Hải Phòng, Việt Nam</span></div>
+            <div class="row"><span class="k" data-en="Factory">Nhà máy</span><span class="v">Lô CN2, CCN thị trấn Tiên Lãng, X. Tiên Lãng, TP. Hải Phòng, Việt Nam</span></div>
+            <div class="row"><span class="k" data-en="Phone">Số điện thoại</span><span class="v">(84-225) 324 6789</span></div>
+            <div class="row"><span class="k" data-en="Email">Email</span><span class="v">info@hhpglobaljsc.com</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background:var(--paper-50);padding-top:0">
+      <div class="wrap">
+        <div class="news-grid" style="grid-template-columns:1fr 1fr;padding-top:clamp(40px,6vw,80px)">
+          <div class="stock reveal" id="stockWidget">
+            <div class="stock__top">
+              <div class="stock__sym">
+                <span class="badge"><svg class="mark"><use href="#hhp-mark"/></svg></span>
+                <div><div class="t">HHP</div><div class="e">CTCP HHP Global · HOSE</div></div>
+              </div>
+              <div class="stock__price"><div class="p" id="stPrice">—</div><div class="chg up" id="stChg"><svg style="width:14px;height:14px"><use href="#i-up"/></svg> <span>—</span></div></div>
+            </div>
+            <div class="range-tabs">
+              <button class="range-tab" data-r="1D">1D</button>
+              <button class="range-tab" data-r="1M">1M</button>
+              <button class="range-tab" data-r="3M">3M</button>
+              <button class="range-tab active" data-r="1Y">1Y</button>
+            </div>
+            <div class="stock__chart" style="margin-top:14px">
+              <svg viewBox="0 0 600 140" id="stChart" preserveAspectRatio="none">
+                <defs><linearGradient id="stockgrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#46d98a" stop-opacity="0.34"/><stop offset="100%" stop-color="#46d98a" stop-opacity="0"/></linearGradient></defs>
+                <path class="area" id="stArea"></path><path class="line" id="stLine"></path><circle class="cursor" id="stCursor" r="4"></circle>
+              </svg>
+            </div>
+            <div class="stock__row">
+              <div class="stock__cell"><div class="k" data-en="Market cap">Vốn hóa</div><div class="v">1.276 tỷ</div></div>
+              <div class="stock__cell"><div class="k" data-en="Volume">KLGD</div><div class="v">606.100</div></div>
+              <div class="stock__cell"><div class="k">P/E</div><div class="v">26.03</div></div>
+              <div class="stock__cell"><div class="k">EPS</div><div class="v">566</div></div>
+            </div>
+            <div class="stock__note"><span class="stock__live"><span class="ld"></span><span data-en="LIVE (demo)">LIVE (demo)</span></span><span data-en="· Illustrative data — ready to connect a real market API.">· Số liệu minh hoạ — sẵn sàng kết nối API thị trường thật.</span></div>
+          </div>
+
+          <div class="news-list">
+            <div class="kicker-row" style="margin-bottom:6px"><span class="eyebrow" data-en="Shareholder news">Tin cổ đông</span></div>
+            <a class="ncard"><div class="ncard__media"><image-slot id="ir-1" placeholder="Ảnh" shape="rect"></image-slot></div><div class="ncard__body"><span class="cat" data-en="Stock">Chứng khoán</span><h4 data-en="HHP reports Q1 results with strong output growth">HHP công bố KQKD Quý 1 với tăng trưởng sản lượng tích cực</h4><span class="date">22/04/2026</span></div></a>
+            <a class="ncard"><div class="ncard__media"><image-slot id="ir-2" placeholder="Ảnh" shape="rect"></image-slot></div><div class="ncard__body"><span class="cat" data-en="Dividend">Cổ tức</span><h4 data-en="Board proposes 2025 cash dividend plan">HĐQT trình phương án cổ tức tiền mặt năm 2025</h4><span class="date">18/04/2026</span></div></a>
+            <a class="ncard"><div class="ncard__media"><image-slot id="ir-3" placeholder="Ảnh" shape="rect"></image-slot></div><div class="ncard__body"><span class="cat" data-en="Event">Sự kiện</span><h4 data-en="HHP welcomes investors to the Hải Phòng plant">HHP đón nhà đầu tư tham quan nhà máy Hải Phòng</h4><span class="date">09/04/2026</span></div></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===== TAB 2: CÔNG BỐ THÔNG TIN ===== -->
+  <div class="ir-panel" id="tab-cbtt">
+    <section class="section">
+      <div class="wrap">
+        <span class="eyebrow" data-en="Information disclosure">Công bố thông tin</span>
+        <h2 class="section-title" data-en="Latest disclosures">Công bố thông tin mới nhất</h2>
+        <p class="section-intro" style="max-width:60ch" data-en="Information disclosed in line with HOSE & State Securities Commission regulations.">Thông tin công bố theo quy định của HOSE & Uỷ ban Chứng khoán Nhà nước.</p>
+        <div class="doc-list">
+          <a class="doc-row"><span class="d-ic"><svg><use href="#i-doc"/></svg></span><div><div class="d-title">CBTT: Bổ nhiệm thành viên Hội đồng quản trị</div><div class="d-meta"><span class="d-cat">CBTT</span><span>PDF · 0.4 MB</span></div></div><span class="d-date">02/04/2026</span><span class="d-dl"><svg><use href="#i-download"/></svg></span></a>
+          <a class="doc-row"><span class="d-ic"><svg><use href="#i-doc"/></svg></span><div><div class="d-title">CBTT: Thông báo giao dịch cổ phiếu của người nội bộ</div><div class="d-meta"><span class="d-cat">CBTT</span><span>PDF · 0.3 MB</span></div></div><span class="d-date">20/03/2026</span><span class="d-dl"><svg><use href="#i-download"/></svg></span></a>
+          <a class="doc-row"><span class="d-ic"><svg><use href="#i-doc"/></svg></span><div><div class="d-title">CBTT: Thông báo lịch họp ĐHĐCĐ thường niên 2026</div><div class="d-meta"><span class="d-cat">CBTT</span><span>PDF · 0.3 MB</span></div></div><span class="d-date">05/03/2026</span><span class="d-dl"><svg><use href="#i-download"/></svg></span></a>
+          <a class="doc-row"><span class="d-ic"><svg><use href="#i-doc"/></svg></span><div><div class="d-title">CBTT: Ký hợp đồng kiểm toán BCTC năm 2026</div><div class="d-meta"><span class="d-cat">CBTT</span><span>PDF · 0.2 MB</span></div></div><span class="d-date">12/02/2026</span><span class="d-dl"><svg><use href="#i-download"/></svg></span></a>
+        </div>
+        <p class="fc-sub" style="margin-top:1.2rem;color:var(--text-soft);font-size:.84rem" data-en="Demo documents — connect your IR document store or HOSE feed to go live.">Tài liệu minh hoạ — kết nối kho tài liệu IR hoặc nguồn HOSE để hiển thị thật.</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===== TAB 3: ĐẠI HỘI ĐỒNG CỔ ĐÔNG ===== -->
+  <div class="ir-panel" id="tab-dhdcd">
+    <section class="section">
+      <div class="wrap">
+        <span class="eyebrow" data-en="General meeting">Đại hội đồng cổ đông</span>
+        <h2 class="section-title" data-en="AGM documents">Tài liệu Đại hội đồng cổ đông</h2>
+        <div class="doc-list">
+          <a class="doc-row"><span class="d-ic"><svg><use href="#i-doc"/></svg></span><div><div class="d-title">Nghị quyết ĐHĐCĐ thường niên năm 2026</div><div class="d-meta"><span class="d-cat">ĐHĐCĐ</span><span>PDF · 0.6 MB</span></div></div><span class="d-date">18/04/2026</span><span class="d-dl"><svg><use href="#i-download"/></svg></span></a>
+          <a class="doc-row"><span class="d-ic"><svg><use href="#i-doc"/></svg></span><div><div class="d-title">Biên bản họp ĐHĐCĐ thường niên năm 2026</div><div class="d-meta"><span class="d-cat">ĐHĐCĐ</span><span>PDF · 0.8 MB</span></div></div><span class="d-date">18/04/2026</span><span class="d-dl"><svg><use href="#i-download"/></svg></span></a>
+          <a class="doc-row"><span class="d-ic"><svg><use href="#i-doc"/></svg></span><div><div class="d-title">Tài liệu họp ĐHĐCĐ thường niên 2026 (toàn văn)</div><div class="d-meta"><span class="d-cat">ĐHĐCĐ</span><span>PDF · 3.4 MB</span></div></div><span class="d-date">28/03/2026</span><span class="d-dl"><svg><use href="#i-download"/></svg></span></a>
+          <a class="doc-row"><span class="d-ic"><svg><use href="#i-doc"/></svg></span><div><div class="d-title">Thư mời & mẫu uỷ quyền tham dự ĐHĐCĐ 2026</div><div class="d-meta"><span class="d-cat">ĐHĐCĐ</span><span>PDF · 0.5 MB</span></div></div><span class="d-date">28/03/2026</span><span class="d-dl"><svg><use href="#i-download"/></svg></span></a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===== TAB 4: BÁO CÁO TÀI CHÍNH ===== -->
+  <div class="ir-panel" id="tab-bctc">
+    <section class="section">
+      <div class="wrap">
+        <span class="eyebrow" data-en="Financial reports">Báo cáo tài chính</span>
+        <h2 class="section-title" data-en="Financial statements">Báo cáo tài chính</h2>
+        <div class="doc-list">
+          <a class="doc-row"><span class="d-ic"><svg><use href="#i-doc"/></svg></span><div><div class="d-title">Báo cáo tài chính Quý 1/2026</div><div class="d-meta"><span class="d-cat">BCTC</span><span>PDF · 1.2 MB</span></div></div><span class="d-date">22/04/2026</span><span class="d-dl"><svg><use href="#i-download"/></svg></span></a>
+          <a class="doc-row"><span class="d-ic"><svg><use href="#i-doc"/></svg></span><div><div class="d-title">Báo cáo tài chính kiểm toán năm 2025</div><div class="d-meta"><span class="d-cat">BCTC</span><span>PDF · 2.1 MB</span></div></div><span class="d-date">15/03/2026</span><span class="d-dl"><svg><use href="#i-download"/></svg></span></a>
+          <a class="doc-row"><span class="d-ic"><svg><use href="#i-doc"/></svg></span><div><div class="d-title">Báo cáo tài chính Quý 4/2025</div><div class="d-meta"><span class="d-cat">BCTC</span><span>PDF · 1.1 MB</span></div></div><span class="d-date">20/01/2026</span><span class="d-dl"><svg><use href="#i-download"/></svg></span></a>
+          <a class="doc-row"><span class="d-ic"><svg><use href="#i-doc"/></svg></span><div><div class="d-title">Báo cáo tài chính bán niên soát xét 2025</div><div class="d-meta"><span class="d-cat">BCTC</span><span>PDF · 1.6 MB</span></div></div><span class="d-date">15/08/2025</span><span class="d-dl"><svg><use href="#i-download"/></svg></span></a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===== TAB 5: BÁO CÁO THƯỜNG NIÊN ===== -->
+  <div class="ir-panel" id="tab-bctn">
+    <section class="section">
+      <div class="wrap">
+        <span class="eyebrow" data-en="Annual reports">Báo cáo thường niên</span>
+        <h2 class="section-title" data-en="Annual reports">Báo cáo thường niên</h2>
+        <div class="doc-list">
+          <a class="doc-row"><span class="d-ic"><svg><use href="#i-doc"/></svg></span><div><div class="d-title">Báo cáo thường niên năm 2025</div><div class="d-meta"><span class="d-cat">BCTN</span><span>PDF · 6.5 MB</span></div></div><span class="d-date">28/03/2026</span><span class="d-dl"><svg><use href="#i-download"/></svg></span></a>
+          <a class="doc-row"><span class="d-ic"><svg><use href="#i-doc"/></svg></span><div><div class="d-title">Báo cáo thường niên năm 2024</div><div class="d-meta"><span class="d-cat">BCTN</span><span>PDF · 6.1 MB</span></div></div><span class="d-date">30/03/2025</span><span class="d-dl"><svg><use href="#i-download"/></svg></span></a>
+          <a class="doc-row"><span class="d-ic"><svg><use href="#i-doc"/></svg></span><div><div class="d-title">Báo cáo phát triển bền vững (ESG) 2025</div><div class="d-meta"><span class="d-cat">ESG</span><span>PDF · 4.0 MB</span></div></div><span class="d-date">28/03/2026</span><span class="d-dl"><svg><use href="#i-download"/></svg></span></a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===== TAB 6: TRỢ GIÚP CỔ ĐÔNG ===== -->
+  <div class="ir-panel" id="tab-help">
+    <section class="section">
+      <div class="wrap">
+        <span class="eyebrow" data-en="Shareholder support">Trợ giúp cổ đông</span>
+        <h2 class="section-title" data-en="Frequently asked questions">Câu hỏi thường gặp</h2>
+        <div class="faq">
+          <details open><summary data-en="How do I transfer / trade HHP shares?">Tôi mua bán / chuyển nhượng cổ phiếu HHP như thế nào?</summary><div class="faq-body" data-en="HHP is listed on HOSE under the ticker HHP — you can trade through any licensed securities company in Vietnam.">Cổ phiếu HHP niêm yết trên sàn HOSE với mã HHP — bạn có thể giao dịch qua bất kỳ công ty chứng khoán được cấp phép tại Việt Nam.</div></details>
+          <details><summary data-en="How and when are dividends paid?">Cổ tức được chi trả khi nào và bằng hình thức gì?</summary><div class="faq-body" data-en="Dividend policy is approved at the AGM each year; payment schedules are announced via official disclosures on this page.">Chính sách cổ tức được ĐHĐCĐ thông qua hàng năm; lịch chi trả được công bố qua mục Công bố thông tin trên trang này.</div></details>
+          <details><summary data-en="How do I update my shareholder information?">Tôi cập nhật thông tin cổ đông bằng cách nào?</summary><div class="faq-body" data-en="Please contact VSDC or our Investor Relations team with your securities account details for assistance.">Vui lòng liên hệ Tổng công ty Lưu ký & Bù trừ (VSDC) hoặc đội ngũ Quan hệ nhà đầu tư của HHP kèm thông tin tài khoản chứng khoán để được hỗ trợ.</div></details>
+          <details><summary data-en="Where can I find financial reports & disclosures?">Tôi xem báo cáo tài chính & công bố ở đâu?</summary><div class="faq-body" data-en="All reports are available in the Financial reports, Annual reports and Disclosures tabs above.">Toàn bộ báo cáo có tại các tab Báo cáo tài chính, Báo cáo thường niên và Công bố thông tin phía trên.</div></details>
+        </div>
+        <div class="fac-addr" style="max-width:560px;margin-top:2rem">
+          <svg><use href="#i-mail"/></svg>
+          <div><div class="al" data-en="Investor Relations contact">Liên hệ Quan hệ nhà đầu tư</div><div>info@hhpglobaljsc.com · (84-225) 324 6789</div></div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- GALLERY -->
+  <section class="section" style="background:var(--paper-50)">
+    <div class="wrap">
+      <div class="sec-head center">
+        <span class="eyebrow" data-en="Event gallery">Hình ảnh sự kiện</span>
+        <h2 class="section-title reveal" data-en="AGM & investor events">Hình ảnh ĐHĐCĐ & sự kiện cổ đông</h2>
+      </div>
+      <div class="gallery reveal" data-d="1">
+        <div class="x3 y2"><image-slot id="idr-g1" placeholder="Ảnh ĐHĐCĐ (nổi bật)" shape="rect"></image-slot></div>
+        <div class="x3"><image-slot id="idr-g2" placeholder="Ảnh sự kiện" shape="rect"></image-slot></div>
+        <div class="x3"><image-slot id="idr-g3" placeholder="Ảnh sự kiện" shape="rect"></image-slot></div>
+        <div class="x3"><image-slot id="idr-g4" placeholder="Ảnh trao giải / ký kết" shape="rect"></image-slot></div>
+        <div class="x3"><image-slot id="idr-g5" placeholder="Ảnh tham quan nhà máy" shape="rect"></image-slot></div>
+      </div>
+      <div class="gallery-note"><svg><use href="#i-check"/></svg><span data-en="Drag & drop your event photos — they save automatically.">Kéo-thả ảnh sự kiện của bạn vào từng ô — ảnh được lưu tự động.</span></div>
+    </div>
+  </section>
+
+  <section class="section cta-band">
+    <div class="cta-band__art"><svg style="--mark-fill:#fff;--mark-accent:#cfeefb"><use href="#hhp-mark"/></svg></div>
+    <div class="wrap">
+      <h2 data-en="Investor relations contact">Liên hệ quan hệ nhà đầu tư</h2>
+      <p data-en="Questions about HHP stock, disclosures or shareholder matters? Reach our IR team.">Câu hỏi về cổ phiếu HHP, công bố thông tin hay vấn đề cổ đông? Liên hệ đội ngũ IR của chúng tôi.</p>
+      <div class="hero-cta"><a href="lien-he.html" class="btn btn--white btn--lg" data-en="Contact IR">Liên hệ IR <svg><use href="#i-arrow"/></svg></a></div>
+    </div>
+  </section>
+</main>
+
+<div data-chrome="footer"></div>
+<script src="image-slot.js"></script>
+<script src="assets/js/chrome.js"></script>
+<script>
+(function(){
+  const $=(s)=>document.querySelector(s);
+  /* IR tabs */
+  const tabs=[...document.querySelectorAll('.ir-tab')], panels=[...document.querySelectorAll('.ir-panel')];
+  tabs.forEach(t=> t.addEventListener('click', ()=>{
+    tabs.forEach(x=>x.classList.remove('active')); t.classList.add('active');
+    panels.forEach(p=> p.classList.toggle('active', p.id==='tab-'+t.dataset.tab));
+    window.scrollTo({top: document.querySelector('.ir-tabbar').offsetTop - 60, behavior:'smooth'});
+  }));
+
+  /* stock sim (demo) — VND scale around 14,750 */
+  const wrap=$('#stockWidget'); if(!wrap) return;
+  const W=600,H=140; const RANGES={'1D':40,'1M':40,'3M':60,'1Y':80};
+  let series=[], open=0;
+  function build(n,vol){ series=[]; let p=14750*0.78; for(let i=0;i<n;i++){ p+=(Math.random()-0.44)*vol; series.push(p);} 
+    // pull last value to ~14750
+    const last=series[series.length-1]; const adj=14750-last; series=series.map((v,i)=>v+adj*(i/(n-1)));
+    open=series[0]; }
+  build(80, 180);
+  const line=$('#stLine'),area=$('#stArea'),cursor=$('#stCursor');
+  const vnd=(n)=>Math.round(n).toLocaleString('vi-VN');
+  function render(){
+    const min=Math.min(...series)*0.996, max=Math.max(...series)*1.004;
+    const sx=i=>i/(series.length-1)*W, sy=v=>H-(v-min)/(max-min)*H;
+    let d='M'+sx(0)+','+sy(series[0]); series.forEach((v,i)=>{ if(i)d+=' L'+sx(i)+','+sy(v); });
+    line.setAttribute('d',d); area.setAttribute('d',d+` L${W},${H} L0,${H} Z`);
+    const last=series[series.length-1]; cursor.setAttribute('cx',sx(series.length-1)); cursor.setAttribute('cy',sy(last));
+    const chg=last-open, pct=chg/open*100, up=chg>=0;
+    $('#stPrice').textContent=vnd(last);
+    const c=$('#stChg'); c.className='chg '+(up?'up':'down');
+    c.querySelector('span').textContent=`${up?'+':''}${vnd(chg)} (${up?'+':''}${pct.toFixed(2)}%)`;
+    c.querySelector('svg').style.transform=up?'none':'rotate(180deg)';
+    const col=up?'#46d98a':'#ff7a6b'; line.style.stroke=col; cursor.style.fill=col;
+    const g=document.querySelector('#stockgrad stop'); if(g) g.setAttribute('stop-color',col);
+  }
+  render();
+  /* range buttons */
+  document.querySelectorAll('.range-tab').forEach(b=> b.addEventListener('click', ()=>{
+    document.querySelectorAll('.range-tab').forEach(x=>x.classList.remove('active')); b.classList.add('active');
+    build(RANGES[b.dataset.r]||80, b.dataset.r==='1D'?60:180); render();
+  }));
+  setInterval(()=>{ series.push(series[series.length-1]+(Math.random()-0.47)*90); series.shift(); render(); }, 2600);
+})();
+</script>
+</body>
+</html>
